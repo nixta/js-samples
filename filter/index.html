@@ -47,7 +47,7 @@
         	var defEx = _.mapObject(defExParams, function(paramVal, paramName) {
         		var out = [],
         			paramVals = _.flatten([paramVal]),
-        			fuzzy = paramName.endsWith("~"),
+                    fuzzy = paramName.substring(paramName.length-1) === "~",
         			name = fuzzy?paramName.substring(0, paramName.length - 1):paramName;
         		return _.map(paramVals, function(val) {
 	        		if (fuzzy){
