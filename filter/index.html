@@ -61,40 +61,70 @@
             return defEx;
         }
 
-        require(["esri/arcgis/utils", "esri/tasks/query", "dojo/io-query", "dojo/on", "dojo/domReady!"],
-                function(arcgisUtils, Query, ioQuery, on) {
+        require(["esri/arcgis/utils", "esri/tasks/query", "dojo/io-query", "dojo/on", "dojo/domReady!"], function (arcgisUtils, Query, ioQuery, on) {
+            var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
 
-                    var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
-                    var webMapID = params["webmapid"];
-                    if (webMapID === undefined) {
-                        console.warn("You must provide at least a webmapid URL parameter!");
-                        return;
-                    }
-                    delete params["webmapid"];
+            var featureLayerURL = params["fl"];
+            var webMapID = params["webmapid"];
+            var basemap = params["basemap"];
+            delete params["webmapid"];
+            delete params["fl"];
+            delete params["basemap"];
 
-                    arcgisUtils.createMap(webMapID, "map").then(function (response) {
-                        map = response.map;
+            if (featureLayerURL === undefined && webMapID === undefined) {
+                console.log("You must use the 'fl' parameter to provide the URL to a featureLayer to display, or the 'webmapid' parameter to provide a webmap Item ID");
+                return;
+            }
 
-                        var topLayerId = map.graphicsLayerIds[map.graphicsLayerIds.length-1],
-                            topLayer = map.getLayer(topLayerId);
+            if (webMapID !== undefined) {
+                // WebMap Mode
+                arcgisUtils.createMap(webMapID, "map").then(function (response) {
+                    map = response.map;
 
-                        var defEx = getDefinitionExpressionForLayerAndParams(topLayer, params);
+                    var topLayerId = map.graphicsLayerIds[map.graphicsLayerIds.length-1],
+                        topLayer = map.getLayer(topLayerId);
+
+                    var defEx = getDefinitionExpressionForLayerAndParams(topLayer, params);
+                    var query = Query();
+                    query.where = defEx;
+                    topLayer.queryExtent(query).then(function (queryResponse) {
+                        map.setExtent(queryResponse.extent, true);
+                    }, function (error) {
+                        console.error("Error getting extent for features: " + error);
+                    });
+
+                    on.once(topLayer, "update-end", function() {
+                        topLayer.setDefinitionExpression(defEx);
+                    });
+                }, function (error) {
+                    console.error("Error loading WebMap " + webMapID + ": " + error);
+                });
+            } else {
+                // FeatureLayer mode
+                require(["esri/map", "esri/layers/FeatureLayer", "esri/SpatialReference"], function (Map, FeatureLayer, SpatialReference) {
+                    var fl = FeatureLayer(featureLayerURL, {mode: FeatureLayer.MODE_SNAPSHOT, fields: ["*"]});
+                    fl.on("load", function (loadEvent) {
+                        var defEx = getDefinitionExpressionForLayerAndParams(fl, params);
                         var query = Query();
                         query.where = defEx;
-                        topLayer.queryExtent(query).then(function (queryResponse) {
-                            map.setExtent(queryResponse.extent, true);
+                        query.outSpatialReference = new SpatialReference(102100);
+                        fl.queryExtent(query).then(function (queryResponse) {
+                            if (basemap === undefined) {
+                                basemap = "streets";
+                            }
+                            map = new Map("map", {
+                                extent: queryResponse.extent,
+                                fitExtent: true,
+                                basemap: basemap
+                            });
+                            map.addLayer(fl);
                         }, function (error) {
                             console.error("Error getting extent for features: " + error);
                         });
-
-                        on.once(topLayer, "update-end", function() {
-                            topLayer.setDefinitionExpression(defEx);
-                        });
-                    }, function (error) {
-                        console.error("Error loading WebMap " + webMapID + ": " + error);
                     });
-
                 });
+            }
+        });
     </script>
 </head>
 
