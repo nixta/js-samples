@@ -70,6 +70,7 @@
                         webMapID = params["webmapid"];
                         delete params["webmapid"];
                     } else {
+                        console.warn("You must provide at least a webmapid URL parameter!");
                         return;
                     }
 
