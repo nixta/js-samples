@@ -42,7 +42,7 @@
 	        	exactMatchFieldNames = _.map(fieldNames, function(fieldName) {
 	        		return fieldName + "~";
 	        	});
-        	fieldNames = _.zip(fieldNames, exactMatchFieldNames);
+        	fieldNames = _.union(fieldNames, exactMatchFieldNames);
         	var defExParams = _.pick(params, fieldNames);
         	var defEx = _.mapObject(defExParams, function(paramVal, paramName) {
         		var out = [],
@@ -61,8 +61,8 @@
         	layer.setDefinitionExpression(defEx);
         }
 
-        require(["esri/arcgis/utils", "esri/map", "esri/layers/FeatureLayer", "dojo/io-query", "dojo/domReady!"],
-                function(arcgisUtils, Map, FeatureLayer, ioQuery) {
+        require(["esri/arcgis/utils", "dojo/io-query", "dojo/on", "dojo/domReady!"],
+                function(arcgisUtils, ioQuery, on) {
 
                     var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
                     var webMapID;
@@ -79,16 +79,8 @@
                         var topLayerId = map.graphicsLayerIds[map.layerIds.length-1],
                             topLayer = map.getLayer(topLayerId);
 
-                        map.removeLayer(topLayer);
-                        console.log(topLayer.loaded);
-                        setDefinitionExpressionOnLayerForParams(topLayer, params);
-                        map.addLayer(topLayer);
-
-                        topLayer.on("load", function (e) {
-                            console.log("Loaded");
-                        });
-                        topLayer.on("update", function(loadEvent) {
-                            console.log("Update");
+                        on.once(topLayer, "update-end", function(loadEvent) {
+                            setDefinitionExpressionOnLayerForParams(topLayer, params);
                         });
                     });
 
