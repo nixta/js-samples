@@ -61,27 +61,37 @@
         	layer.setDefinitionExpression(defEx);
         }
 
-        require(["esri/map", "esri/layers/FeatureLayer", "dojo/io-query", "dojo/domReady!"],
-                function(Map, FeatureLayer, ioQuery) {
-
-                    map = new Map("map", {
-                        basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
-                        center: [-73.986, 40.746], // longitude, latitude
-                        zoom: 12
-                    });
-          
-                    var featureLayer = new FeatureLayer("http://services6.arcgis.com/0p6i4J6xhQas4Unf/arcgis/rest/services/MWBE_Vendors/FeatureServer/0", {
-                      mode: FeatureLayer.MODE_SNAPSHOT,
-                      outFields: ["*"]
-                    });
+        require(["esri/arcgis/utils", "esri/map", "esri/layers/FeatureLayer", "dojo/io-query", "dojo/domReady!"],
+                function(arcgisUtils, Map, FeatureLayer, ioQuery) {
 
                     var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
+                    var webMapID;
+                    if (params.hasOwnProperty("webmapid")) {
+                        webMapID = params["webmapid"];
+                        delete params["webmapid"];
+                    } else {
+                        return;
+                    }
 
-                    featureLayer.on("load", function(loadEvent) {
-                    	setDefinitionExpressionOnLayerForParams(loadEvent.layer, params);
+                    arcgisUtils.createMap(webMapID, "map").then(function(response) {
+                        map = response.map;
+
+                        var topLayerId = map.graphicsLayerIds[map.layerIds.length-1],
+                            topLayer = map.getLayer(topLayerId);
+
+                        map.removeLayer(topLayer);
+                        console.log(topLayer.loaded);
+                        setDefinitionExpressionOnLayerForParams(topLayer, params);
+                        map.addLayer(topLayer);
+
+                        topLayer.on("load", function (e) {
+                            console.log("Loaded");
+                        });
+                        topLayer.on("update", function(loadEvent) {
+                            console.log("Update");
+                        });
                     });
 
-                    map.addLayer(featureLayer);       
                 });
     </script>
 </head>
