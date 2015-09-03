@@ -32,7 +32,7 @@
         	return output;
         }
 
-        function setDefinitionExpressionOnLayerForParams(layer, params) {
+        function getDefinitionExpressionForLayerAndParams(layer, params) {
         	// Assumes each filter field is a string.
         	// Exact search. Pass param name with trailing ~ for fuzzy match (e.g. city~=QUEENS will match "QUEENS VILLAGE");
         	// Multiple matches: For multiple zips, pass zip=10001&zip=10010 for example.
@@ -58,11 +58,11 @@
         		});
         	});
         	defEx = _.flatten(_.values(defEx)).join(" OR ");
-        	layer.setDefinitionExpression(defEx);
+            return defEx;
         }
 
-        require(["esri/arcgis/utils", "dojo/io-query", "dojo/on", "dojo/domReady!"],
-                function(arcgisUtils, ioQuery, on) {
+        require(["esri/arcgis/utils", "esri/tasks/query", "dojo/io-query", "dojo/on", "dojo/domReady!"],
+                function(arcgisUtils, Query, ioQuery, on) {
 
                     var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
                     var webMapID;
@@ -74,15 +74,26 @@
                         return;
                     }
 
-                    arcgisUtils.createMap(webMapID, "map").then(function(response) {
+                    arcgisUtils.createMap(webMapID, "map").then(function (response) {
                         map = response.map;
 
-                        var topLayerId = map.graphicsLayerIds[map.layerIds.length-1],
+                        var topLayerId = map.graphicsLayerIds[map.graphicsLayerIds.length-1],
                             topLayer = map.getLayer(topLayerId);
 
-                        on.once(topLayer, "update-end", function(loadEvent) {
-                            setDefinitionExpressionOnLayerForParams(topLayer, params);
+                        var defEx = getDefinitionExpressionForLayerAndParams(topLayer, params);
+                        var query = Query();
+                        query.where = defEx;
+                        topLayer.queryExtent(query).then(function (queryResponse) {
+                            map.setExtent(queryResponse.extent, true);
+                        }, function (error) {
+                            console.error("Error getting extent for features: " + error);
                         });
+
+                        on.once(topLayer, "update-end", function() {
+                            topLayer.setDefinitionExpression(defEx);
+                        });
+                    }, function (error) {
+                        console.error("Error loading WebMap " + webMapID + ": " + error);
                     });
 
                 });
