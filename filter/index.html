@@ -115,7 +115,7 @@
 
                             // Modify the item JSON to set the extent.
                             if (apiExtent !== undefined) {
-                                var ext = apiExtent.expand(1.5);
+                                var ext = apiExtent.expand(1.5); // This seems to match the JSAPI boundary.
                                 item.item.extent = [[ext.xmin, ext.ymin],[ext.xmax,ext.ymax]];
                             }
                             arcgisUtils.createMap(item, "map").then(function(response){
