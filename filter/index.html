@@ -61,7 +61,7 @@
             return defEx;
         }
 
-        require(["esri/arcgis/utils", "esri/tasks/query", "dojo/io-query", "dojo/on", "dojo/domReady!"], function (arcgisUtils, Query, ioQuery, on) {
+        require(["esri/arcgis/utils", "esri/layers/FeatureLayer", "esri/tasks/query", "esri/SpatialReference", "dojo/io-query", "dojo/on", "dojo/domReady!"], function (arcgisUtils, FeatureLayer, Query, SpatialReference, ioQuery, on) {
             var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
 
             var featureLayerURL = params["fl"];
@@ -78,33 +78,62 @@
 
             if (webMapID !== undefined) {
                 // WebMap Mode
-                arcgisUtils.createMap(webMapID, "map").then(function (response) {
-                    map = response.map;
-
-                    var topLayerId = map.graphicsLayerIds[map.graphicsLayerIds.length-1],
-                        topLayer = map.getLayer(topLayerId);
-
-                    var defEx = getDefinitionExpressionForLayerAndParams(topLayer, params);
-                    var query = Query();
-                    query.where = defEx;
-                    topLayer.queryExtent(query).then(function (queryResponse) {
-                        map.setExtent(queryResponse.extent, true);
-                    }, function (error) {
-                        console.error("Error getting extent for features: " + error);
-                    });
-
-                    on.once(topLayer, "update-end", function() {
-                        topLayer.setDefinitionExpression(defEx);
-                    });
-                }, function (error) {
-                    console.error("Error loading WebMap " + webMapID + ": " + error);
+                arcgisUtils.getItem(webMapID).then( function (item) {
+                    var topLayerDefinition = item.itemData.operationalLayers[item.itemData.operationalLayers.length-1];
+                    if (topLayerDefinition !== undefined) {
+                        var url = topLayerDefinition.url;
+                        var layerName = topLayerDefinition.id;
+                        var fl = new FeatureLayer(url, {mode: FeatureLayer.MODE_SNAPSHOT, fields: ["*"]});
+                        fl.on("load", function (loadEvent) {
+                            var defEx = getDefinitionExpressionForLayerAndParams(fl, params);
+                            var query = Query();
+                            query.where = defEx;
+                            query.outSpatialReference = new SpatialReference(4326);
+                            fl.queryExtent(query).then(function (queryResponse) {
+                                var ext = queryResponse.extent;
+                                ext = ext.expand(2);
+                                item.item.extent = [[ext.xmin, ext.ymin],[ext.xmax,ext.ymax]];
+                                console.log("Nearly there!");
+                                arcgisUtils.createMap(item, "map").then(function(response){
+                                    map = response.map
+                                    map.setExtent(queryResponse.extent, true);
+                                    var topLayer = map.getLayer(layerName);
+                                    on.once(topLayer, "update-end", function() {
+                                        topLayer.setDefinitionExpression(defEx);
+                                    });
+                                });
+                            });
+                        });
+                    }
                 });
+                // arcgisUtils.createMap(webMapID, "map").then(function (response) {
+                //     map = response.map;
+
+                //     var topLayerId = map.graphicsLayerIds[map.graphicsLayerIds.length-1],
+                //         topLayer = map.getLayer(topLayerId);
+
+                //     var defEx = getDefinitionExpressionForLayerAndParams(topLayer, params);
+                //     var query = Query();
+                //     query.where = defEx;
+                //     topLayer.queryExtent(query).then(function (queryResponse) {
+                //         map.setExtent(queryResponse.extent, true);
+                //     }, function (error) {
+                //         console.error("Error getting extent for features: " + error);
+                //     });
+
+                //     on.once(topLayer, "update-end", function() {
+                //         topLayer.setDefinitionExpression(defEx);
+                //     });
+                // }, function (error) {
+                //     console.error("Error loading WebMap " + webMapID + ": " + error);
+                // });
             } else {
                 // FeatureLayer mode
-                require(["esri/map", "esri/layers/FeatureLayer", "esri/SpatialReference"], function (Map, FeatureLayer, SpatialReference) {
+                require(["esri/map"], function (Map) {
                     var fl = FeatureLayer(featureLayerURL, {mode: FeatureLayer.MODE_SNAPSHOT, fields: ["*"]});
                     fl.on("load", function (loadEvent) {
                         var defEx = getDefinitionExpressionForLayerAndParams(fl, params);
+                        fl.setDefinitionExpression(defEx);
                         var query = Query();
                         query.where = defEx;
                         query.outSpatialReference = new SpatialReference(102100);
