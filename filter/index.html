@@ -65,14 +65,12 @@
                 function(arcgisUtils, Query, ioQuery, on) {
 
                     var params = unCaseObject(dojo.queryToObject(location.search.substring((location.search[0] === "?")?1:0)));
-                    var webMapID;
-                    if (params.hasOwnProperty("webmapid")) {
-                        webMapID = params["webmapid"];
-                        delete params["webmapid"];
-                    } else {
+                    var webMapID = params["webmapid"];
+                    if (webMapID === undefined) {
                         console.warn("You must provide at least a webmapid URL parameter!");
                         return;
                     }
+                    delete params["webmapid"];
 
                     arcgisUtils.createMap(webMapID, "map").then(function (response) {
                         map = response.map;
