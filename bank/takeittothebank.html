@@ -39,16 +39,9 @@ function popData(){
 
 
 <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-<!-- <script src="http://js.arcgis.com/3.14/"></script> -->
+<script src="http://js.arcgis.com/3.14/"></script>
 
 <script type="text/javascript">
-	jQuery(function($) {
-		// Asynchronously Load the map API 
-		var script = document.createElement('script');
-		script.src = "http://js.arcgis.com/3.14/?callback=initialize";
-		document.body.appendChild(script);
-	});
-
 	var map;
 
 	function initialize() {
@@ -83,11 +76,17 @@ function popData(){
 			mapOptions.extent = multiPoint.getExtent();
 
 			map = new Map("map_canvas", mapOptions);
-			map.on("load", function (loadEvent) {
+			map.on("load", function() {
 				for (var i=0; i < graphics.length; i++) {
 					map.graphics.add(graphics[i]);
 				}
 			});
+
+			var onceEvent = map.on("update-end", function() {
+				console.log("Update end");
+				map.setExtent(mapOptions.extent, true);
+				onceEvent.remove();
+			})
 		});
 	};
 </script>
