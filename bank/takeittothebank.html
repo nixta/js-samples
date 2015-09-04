@@ -49,17 +49,14 @@ function popData(){
 		document.body.appendChild(script);
 	});
 
+	var map;
+
 	function initialize() {
-		var map;
-		var bounds = new google.maps.LatLngBounds();
 		var mapOptions = {
-			mapTypeId: 'roadmap'
+			basemap: 'streets',
+			fitExtent: true
 		};
-						
-		// Display a map on the page
-		map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-		map.setTilt(45);
-			
+
 		// Multiple Markers
 		var markers = [
 		['Amalgamated Bank', 40.735495,-73.993129],['Capital One', 40.72165,-73.980291],['Capital One', 40.731581,-73.994781],['Capital One', 40.732944,-73.986949],['Capital One', 40.729778,-73.987136],['Capital One', 40.737201,-73.98963],['Cathay Bank', 40.713367,-73.995898],['Cathay Bank', 40.713725,-73.997205],['East West Bank', 40.71658,-73.995426],['Flushing Bank', 40.737109,-73.987892],['Ponce De Leon Federal Bank', 40.734238,-73.980878],['Popular Community Bank', 40.721374,-73.982947],['Popular Community Bank', 40.7185,-73.987078],		];
@@ -69,35 +66,28 @@ function popData(){
 		['<div class="info_content"><h4>Amalgamated Bank</h4><p>10 East 14th Street<br>New York, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>273 EAST 3RD STREET<br>NEW YORK, NY 10009</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>21 University Place<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>123 3rd avenue<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>159 2ND AVE<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>31 EAST 17TH STREET<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Cathay Bank</h4><p>45 East Broadway<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>Cathay Bank</h4><p>16-18 East Broadway<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>East West Bank</h4><p>77 Bowery<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>Flushing Bank</h4><p>225 Park Avenue South<br>New York, NY 10003</p></div>'],['<div class="info_content"><h4>Ponce De Leon Federal Bank</h4><p>319 First Avenue<br>New York, NY 10003</p></div>'],['<div class="info_content"><h4>Popular Community Bank</h4><p>310 East Houston Street<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>Popular Community Bank</h4><p>134 Delancey Street<br>New York, NY 10002</p></div>'],		];
 			
 		// Display multiple markers on a map
-		var infoWindow = new google.maps.InfoWindow(), marker, i;
-		
-		// Loop through our array of markers & place each one on the map  
-		for( i = 0; i < markers.length; i++ ) {
-			var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-			bounds.extend(position);
-			marker = new google.maps.Marker({
-				position: position,
-				map: map,
-				title: markers[i][0]
-			});
-			
-			// Allow each marker to have an info window    
-			google.maps.event.addListener(marker, 'click', (function(marker, i) {
-				return function() {
-					infoWindow.setContent(infoWindowContent[i][0]);
-					infoWindow.open(map, marker);
+		require(["esri/map", "esri/geometry/Point", "esri/geometry/Multipoint", "esri/symbols/PictureMarkerSymbol", "esri/Color", "esri/graphic", "esri/InfoTemplate", "esri/geometry/webMercatorUtils", "dojo/domReady!"], function (Map, Point, Multipoint, PictureMarkerSymbol, Color, Graphic, InfoTemplate, webMercatorUtils) {
+			var multiPoint,
+				graphics = [],
+				symbol = new PictureMarkerSymbol("https://esri.github.io/quickstart-map-js/images/red-pin-blank.png", 19, 36);
+			for (i=0; i < markers.length; i++) {
+				var position = new Point(markers[i][2], markers[i][1]),
+					infoTemplate = new InfoTemplate("${name}",infoWindowContent[i]);
+				position = webMercatorUtils.geographicToWebMercator(position);
+				var graphic = new Graphic(position, symbol, {name:markers[i][0]}, infoTemplate);
+				graphics.push(graphic);
+				multiPoint = multiPoint || new Multipoint(position.spatialReference);
+				multiPoint.addPoint(position);
+			}
+
+			mapOptions.extent = multiPoint.getExtent();
+
+			map = new Map("map_canvas", mapOptions);
+			map.on("load", function (loadEvent) {
+				for (var i=0; i < graphics.length; i++) {
+					map.graphics.add(graphics[i]);
 				}
-			})(marker, i));
-
-			// Automatically center the map fitting all markers on the screen
-			map.fitBounds(bounds);
-		}
-
-		// Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-		var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-			//this.setZoom(15);
-			map.fitBounds(bounds);
-			google.maps.event.removeListener(boundsListener);
+			});
 		});
 	};
 </script>
