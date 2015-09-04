@@ -1,0 +1,1068 @@
+.icon-home:before{content:"\e900"}.icon-home2:before{content:"\e901"}.icon-home3:before{content:"\e902"}.icon-office:before{content:"\e903"}.icon-newspaper:before{content:"\e904"}.icon-pencil:before{content:"\e905"}.icon-pencil2:before{content:"\e906"}.icon-quill:before{content:"\e907"}.icon-pen:before{content:"\e908"}.icon-blog:before{content:"\e909"}.icon-eyedropper:before{content:"\e90a"}.icon-droplet:before{content:"\e90b"}.icon-paint-format:before{content:"\e90c"}.icon-image:before{content:"\e90d"}.icon-../images:before{content:"\e90e"}.icon-camera:before{content:"\e90f"}.icon-headphones:before{content:"\e910"}.icon-music:before{content:"\e911"}.icon-play:before{content:"\e912"}.icon-film:before{content:"\e913"}.icon-video-camera:before{content:"\e914"}.icon-dice:before{content:"\e915"}.icon-pacman:before{content:"\e916"}.icon-spades:before{content:"\e917"}.icon-clubs:before{content:"\e918"}.icon-diamonds:before{content:"\e919"}.icon-bullhorn:before{content:"\e91a"}.icon-connection:before{content:"\e91b"}.icon-podcast:before{content:"\e91c"}.icon-feed:before{content:"\e91d"}.icon-mic:before{content:"\e91e"}.icon-book:before{content:"\e91f"}.icon-books:before{content:"\e920"}.icon-library:before{content:"\e921"}.icon-file-text:before{content:"\e922"}.icon-profile:before{content:"\e923"}.icon-file-empty:before{content:"\e924"}.icon-files-empty:before{content:"\e925"}.icon-file-text2:before{content:"\e926"}.icon-file-picture:before{content:"\e927"}.icon-file-music:before{content:"\e928"}.icon-file-play:before{content:"\e929"}.icon-file-video:before{content:"\e92a"}.icon-file-zip:before{content:"\e92b"}.icon-copy:before{content:"\e92c"}.icon-paste:before{content:"\e92d"}.icon-stack:before{content:"\e92e"}.icon-folder:before{content:"\e92f"}.icon-folder-open:before{content:"\e930"}.icon-folder-plus:before{content:"\e931"}.icon-folder-minus:before{content:"\e932"}.icon-folder-download:before{content:"\e933"}.icon-folder-upload:before{content:"\e934"}.icon-price-tag:before{content:"\e935"}.icon-price-tags:before{content:"\e936"}.icon-barcode:before{content:"\e937"}.icon-qrcode:before{content:"\e938"}.icon-ticket:before{content:"\e939"}.icon-cart:before{content:"\e93a"}.icon-coin-dollar:before{content:"\e93b"}.icon-coin-euro:before{content:"\e93c"}.icon-coin-pound:before{content:"\e93d"}.icon-coin-yen:before{content:"\e93e"}.icon-credit-card:before{content:"\e93f"}.icon-calculator:before{content:"\e940"}.icon-lifebuoy:before{content:"\e941"}.icon-phone:before{content:"\e942"}.icon-phone-hang-up:before{content:"\e943"}.icon-address-book:before{content:"\e944"}.icon-envelop:before{content:"\e945"}.icon-pushpin:before{content:"\e946"}.icon-location:before{content:"\e947"}.icon-location2:before{content:"\e948"}.icon-compass:before{content:"\e949"}.icon-compass2:before{content:"\e94a"}.icon-map:before{content:"\e94b"}.icon-map2:before{content:"\e94c"}.icon-history:before{content:"\e94d"}.icon-clock:before{content:"\e94e"}.icon-clock2:before{content:"\e94f"}.icon-alarm:before{content:"\e950"}.icon-bell:before{content:"\e951"}.icon-stopwatch:before{content:"\e952"}.icon-calendar:before{content:"\e953"}.icon-printer:before{content:"\e954"}.icon-keyboard:before{content:"\e955"}.icon-display:before{content:"\e956"}.icon-laptop:before{content:"\e957"}.icon-mobile:before{content:"\e958"}.icon-mobile2:before{content:"\e959"}.icon-tablet:before{content:"\e95a"}.icon-tv:before{content:"\e95b"}.icon-drawer:before{content:"\e95c"}.icon-drawer2:before{content:"\e95d"}.icon-box-add:before{content:"\e95e"}.icon-box-remove:before{content:"\e95f"}.icon-download:before{content:"\e960"}.icon-upload:before{content:"\e961"}.icon-floppy-disk:before{content:"\e962"}.icon-drive:before{content:"\e963"}.icon-database:before{content:"\e964"}.icon-undo:before{content:"\e965"}.icon-redo:before{content:"\e966"}.icon-undo2:before{content:"\e967"}.icon-redo2:before{content:"\e968"}.icon-forward:before{content:"\e969"}.icon-reply:before{content:"\e96a"}.icon-bubble:before{content:"\e96b"}.icon-bubbles:before{content:"\e96c"}.icon-bubbles2:before{content:"\e96d"}.icon-bubble2:before{content:"\e96e"}.icon-bubbles3:before{content:"\e96f"}.icon-bubbles4:before{content:"\e970"}.icon-user:before{content:"\e971"}.icon-users:before{content:"\e972"}.icon-user-plus:before{content:"\e973"}.icon-user-minus:before{content:"\e974"}.icon-user-check:before{content:"\e975"}.icon-user-tie:before{content:"\e976"}.icon-quotes-left:before{content:"\e977"}.icon-quotes-right:before{content:"\e978"}.icon-hour-glass:before{content:"\e979"}.icon-spinner:before{content:"\e97a"}.icon-spinner2:before{content:"\e97b"}.icon-spinner3:before{content:"\e97c"}.icon-spinner4:before{content:"\e97d"}.icon-spinner5:before{content:"\e97e"}.icon-spinner6:before{content:"\e97f"}.icon-spinner7:before{content:"\e980"}.icon-spinner8:before{content:"\e981"}.icon-spinner9:before{content:"\e982"}.icon-spinner10:before{content:"\e983"}.icon-spinner11:before{content:"\e984"}.icon-binoculars:before{content:"\e985"}.icon-search:before{content:"\e986"}.icon-zoom-in:before{content:"\e987"}.icon-zoom-out:before{content:"\e988"}.icon-enlarge:before{content:"\e989"}.icon-shrink:before{content:"\e98a"}.icon-enlarge2:before{content:"\e98b"}.icon-shrink2:before{content:"\e98c"}.icon-key:before{content:"\e98d"}.icon-key2:before{content:"\e98e"}.icon-lock:before{content:"\e98f"}.icon-unlocked:before{content:"\e990"}.icon-wrench:before{content:"\e991"}.icon-equalizer:before{content:"\e992"}.icon-equalizer2:before{content:"\e993"}.icon-cog:before{content:"\e994"}.icon-cogs:before{content:"\e995"}.icon-hammer:before{content:"\e996"}.icon-magic-wand:before{content:"\e997"}.icon-aid-kit:before{content:"\e998"}.icon-bug:before{content:"\e999"}.icon-pie-chart:before{content:"\e99a"}.icon-stats-dots:before{content:"\e99b"}.icon-stats-bars:before{content:"\e99c"}.icon-stats-bars2:before{content:"\e99d"}.icon-trophy:before{content:"\e99e"}.icon-gift:before{content:"\e99f"}.icon-glass:before{content:"\e9a0"}.icon-glass2:before{content:"\e9a1"}.icon-mug:before{content:"\e9a2"}.icon-spoon-knife:before{content:"\e9a3"}.icon-leaf:before{content:"\e9a4"}.icon-rocket:before{content:"\e9a5"}.icon-meter:before{content:"\e9a6"}.icon-meter2:before{content:"\e9a7"}.icon-hammer2:before{content:"\e9a8"}.icon-fire:before{content:"\e9a9"}.icon-lab:before{content:"\e9aa"}.icon-magnet:before{content:"\e9ab"}.icon-bin:before{content:"\e9ac"}.icon-bin2:before{content:"\e9ad"}.icon-briefcase:before{content:"\e9ae"}.icon-airplane:before{content:"\e9af"}.icon-truck:before{content:"\e9b0"}.icon-road:before{content:"\e9b1"}.icon-accessibility:before{content:"\e9b2"}.icon-target:before{content:"\e9b3"}.icon-shield:before{content:"\e9b4"}.icon-power:before{content:"\e9b5"}.icon-switch:before{content:"\e9b6"}.icon-power-cord:before{content:"\e9b7"}.icon-clipboard:before{content:"\e9b8"}.icon-list-numbered:before{content:"\e9b9"}.icon-list:before{content:"\e9ba"}.icon-list2:before{content:"\e9bb"}.icon-tree:before{content:"\e9bc"}.icon-menu:before{content:"\e9bd"}.icon-menu2:before{content:"\e9be"}.icon-menu3:before{content:"\e9bf"}.icon-menu4:before{content:"\e9c0"}.icon-cloud:before{content:"\e9c1"}.icon-cloud-download:before{content:"\e9c2"}.icon-cloud-upload:before{content:"\e9c3"}.icon-cloud-check:before{content:"\e9c4"}.icon-download2:before{content:"\e9c5"}.icon-upload2:before{content:"\e9c6"}.icon-download3:before{content:"\e9c7"}.icon-upload3:before{content:"\e9c8"}.icon-sphere:before{content:"\e9c9"}.icon-earth:before{content:"\e9ca"}.icon-link:before{content:"\e9cb"}.icon-flag:before{content:"\e9cc"}.icon-attachment:before{content:"\e9cd"}.icon-eye:before{content:"\e9ce"}.icon-eye-plus:before{content:"\e9cf"}.icon-eye-minus:before{content:"\e9d0"}.icon-eye-blocked:before{content:"\e9d1"}.icon-bookmark:before{content:"\e9d2"}.icon-bookmarks:before{content:"\e9d3"}.icon-sun:before{content:"\e9d4"}.icon-contrast:before{content:"\e9d5"}.icon-brightness-contrast:before{content:"\e9d6"}.icon-star-empty:before{content:"\e9d7"}.icon-star-half:before{content:"\e9d8"}.icon-star-full:before{content:"\e9d9"}.icon-heart:before{content:"\e9da"}.icon-heart-broken:before{content:"\e9db"}.icon-man:before{content:"\e9dc"}.icon-woman:before{content:"\e9dd"}.icon-man-woman:before{content:"\e9de"}.icon-happy:before{content:"\e9df"}.icon-happy2:before{content:"\e9e0"}.icon-smile:before{content:"\e9e1"}.icon-smile2:before{content:"\e9e2"}.icon-tongue:before{content:"\e9e3"}.icon-tongue2:before{content:"\e9e4"}.icon-sad:before{content:"\e9e5"}.icon-sad2:before{content:"\e9e6"}.icon-wink:before{content:"\e9e7"}.icon-wink2:before{content:"\e9e8"}.icon-grin:before{content:"\e9e9"}.icon-grin2:before{content:"\e9ea"}.icon-cool:before{content:"\e9eb"}.icon-cool2:before{content:"\e9ec"}.icon-angry:before{content:"\e9ed"}.icon-angry2:before{content:"\e9ee"}.icon-evil:before{content:"\e9ef"}.icon-evil2:before{content:"\e9f0"}.icon-shocked:before{content:"\e9f1"}.icon-shocked2:before{content:"\e9f2"}.icon-baffled:before{content:"\e9f3"}.icon-baffled2:before{content:"\e9f4"}.icon-confused:before{content:"\e9f5"}.icon-confused2:before{content:"\e9f6"}.icon-neutral:before{content:"\e9f7"}.icon-neutral2:before{content:"\e9f8"}.icon-hipster:before{content:"\e9f9"}.icon-hipster2:before{content:"\e9fa"}.icon-wondering:before{content:"\e9fb"}.icon-wondering2:before{content:"\e9fc"}.icon-sleepy:before{content:"\e9fd"}.icon-sleepy2:before{content:"\e9fe"}.icon-frustrated:before{content:"\e9ff"}.icon-frustrated2:before{content:"\ea00"}.icon-crying:before{content:"\ea01"}.icon-crying2:before{content:"\ea02"}.icon-point-up:before{content:"\ea03"}.icon-point-right:before{content:"\ea04"}.icon-point-down:before{content:"\ea05"}.icon-point-left:before{content:"\ea06"}.icon-warning:before{content:"\ea07"}.icon-notification:before{content:"\ea08"}.icon-question:before{content:"\ea09"}.icon-plus:before{content:"\ea0a"}.icon-minus:before{content:"\ea0b"}.icon-info:before{content:"\ea0c"}.icon-cancel-circle:before{content:"\ea0d"}.icon-blocked:before{content:"\ea0e"}.icon-cross:before{content:"\ea0f"}.icon-checkmark:before{content:"\ea10"}.icon-checkmark2:before{content:"\ea11"}.icon-spell-check:before{content:"\ea12"}.icon-enter:before{content:"\ea13"}.icon-exit:before{content:"\ea14"}.icon-play2:before{content:"\ea15"}.icon-pause:before{content:"\ea16"}.icon-stop:before{content:"\ea17"}.icon-previous:before{content:"\ea18"}.icon-next:before{content:"\ea19"}.icon-backward:before{content:"\ea1a"}.icon-forward2:before{content:"\ea1b"}.icon-play3:before{content:"\ea1c"}.icon-pause2:before{content:"\ea1d"}.icon-stop2:before{content:"\ea1e"}.icon-backward2:before{content:"\ea1f"}.icon-forward3:before{content:"\ea20"}.icon-first:before{content:"\ea21"}.icon-last:before{content:"\ea22"}.icon-previous2:before{content:"\ea23"}.icon-next2:before{content:"\ea24"}.icon-eject:before{content:"\ea25"}.icon-volume-high:before{content:"\ea26"}.icon-volume-medium:before{content:"\ea27"}.icon-volume-low:before{content:"\ea28"}.icon-volume-mute:before{content:"\ea29"}.icon-volume-mute2:before{content:"\ea2a"}.icon-volume-increase:before{content:"\ea2b"}.icon-volume-decrease:before{content:"\ea2c"}.icon-loop:before{content:"\ea2d"}.icon-loop2:before{content:"\ea2e"}.icon-infinite:before{content:"\ea2f"}.icon-shuffle:before{content:"\ea30"}.icon-arrow-up-left:before{content:"\ea31"}.icon-arrow-up:before{content:"\ea32"}.icon-arrow-up-right:before{content:"\ea33"}.icon-arrow-right:before{content:"\ea34"}.icon-arrow-down-right:before{content:"\ea35"}.icon-arrow-down:before{content:"\ea36"}.icon-arrow-down-left:before{content:"\ea37"}.icon-arrow-left:before{content:"\ea38"}.icon-arrow-up-left2:before{content:"\ea39"}.icon-arrow-up2:before{content:"\ea3a"}.icon-arrow-up-right2:before{content:"\ea3b"}.icon-arrow-right2:before{content:"\ea3c"}.icon-arrow-down-right2:before{content:"\ea3d"}.icon-arrow-down2:before{content:"\ea3e"}.icon-arrow-down-left2:before{content:"\ea3f"}.icon-arrow-left2:before{content:"\ea40"}.icon-circle-up:before{content:"\ea41"}.icon-circle-right:before{content:"\ea42"}.icon-circle-down:before{content:"\ea43"}.icon-circle-left:before{content:"\ea44"}.icon-tab:before{content:"\ea45"}.icon-move-up:before{content:"\ea46"}.icon-move-down:before{content:"\ea47"}.icon-sort-alpha-asc:before{content:"\ea48"}.icon-sort-alpha-desc:before{content:"\ea49"}.icon-sort-numeric-asc:before{content:"\ea4a"}.icon-sort-numberic-desc:before{content:"\ea4b"}.icon-sort-amount-asc:before{content:"\ea4c"}.icon-sort-amount-desc:before{content:"\ea4d"}.icon-command:before{content:"\ea4e"}.icon-shift:before{content:"\ea4f"}.icon-ctrl:before{content:"\ea50"}.icon-opt:before{content:"\ea51"}.icon-checkbox-checked:before{content:"\ea52"}.icon-checkbox-unchecked:before{content:"\ea53"}.icon-radio-checked:before{content:"\ea54"}.icon-radio-checked2:before{content:"\ea55"}.icon-radio-unchecked:before{content:"\ea56"}.icon-crop:before{content:"\ea57"}.icon-make-group:before{content:"\ea58"}.icon-ungroup:before{content:"\ea59"}.icon-scissors:before{content:"\ea5a"}.icon-filter:before{content:"\ea5b"}.icon-font:before{content:"\ea5c"}.icon-ligature:before{content:"\ea5d"}.icon-ligature2:before{content:"\ea5e"}.icon-text-height:before{content:"\ea5f"}.icon-text-width:before{content:"\ea60"}.icon-font-size:before{content:"\ea61"}.icon-bold:before{content:"\ea62"}.icon-underline:before{content:"\ea63"}.icon-italic:before{content:"\ea64"}.icon-strikethrough:before{content:"\ea65"}.icon-omega:before{content:"\ea66"}.icon-sigma:before{content:"\ea67"}.icon-page-break:before{content:"\ea68"}.icon-superscript:before{content:"\ea69"}.icon-subscript:before{content:"\ea6a"}.icon-superscript2:before{content:"\ea6b"}.icon-subscript2:before{content:"\ea6c"}.icon-text-color:before{content:"\ea6d"}.icon-pagebreak:before{content:"\ea6e"}.icon-clear-formatting:before{content:"\ea6f"}.icon-table:before{content:"\ea70"}.icon-table2:before{content:"\ea71"}.icon-insert-template:before{content:"\ea72"}.icon-pilcrow:before{content:"\ea73"}.icon-ltr:before{content:"\ea74"}.icon-rtl:before{content:"\ea75"}.icon-section:before{content:"\ea76"}.icon-paragraph-left:before{content:"\ea77"}.icon-paragraph-center:before{content:"\ea78"}.icon-paragraph-right:before{content:"\ea79"}.icon-paragraph-justify:before{content:"\ea7a"}.icon-indent-increase:before{content:"\ea7b"}.icon-indent-decrease:before{content:"\ea7c"}.icon-share:before{content:"\ea7d"}.icon-new-tab:before{content:"\ea7e"}.icon-embed:before{content:"\ea7f"}.icon-embed2:before{content:"\ea80"}.icon-terminal:before{content:"\ea81"}.icon-share2:before{content:"\ea82"}.icon-mail:before{content:"\ea83"}.icon-mail2:before{content:"\ea84"}.icon-mail3:before{content:"\ea85"}.icon-mail4:before{content:"\ea86"}.icon-google:before{content:"\ea87"}.icon-google-plus:before{content:"\ea88"}.icon-google-plus2:before{content:"\ea89"}.icon-google-plus3:before{content:"\ea8a"}.icon-google-drive:before{content:"\ea8b"}.icon-facebook:before{content:"\ea8c"}.icon-facebook2:before{content:"\ea8d"}.icon-facebook3:before{content:"\ea8e"}.icon-ello:before{content:"\ea8f"}.icon-instagram:before{content:"\ea90"}.icon-twitter:before{content:"\ea91"}.icon-twitter2:before{content:"\ea92"}.icon-twitter3:before{content:"\ea93"}.icon-feed2:before{content:"\ea94"}.icon-feed3:before{content:"\ea95"}.icon-feed4:before{content:"\ea96"}.icon-youtube:before{content:"\ea97"}.icon-youtube2:before{content:"\ea98"}.icon-youtube3:before{content:"\ea99"}.icon-youtube4:before{content:"\ea9a"}.icon-twitch:before{content:"\ea9b"}.icon-vimeo:before{content:"\ea9c"}.icon-vimeo2:before{content:"\ea9d"}.icon-vimeo3:before{content:"\ea9e"}.icon-lanyrd:before{content:"\ea9f"}.icon-flickr:before{content:"\eaa0"}.icon-flickr2:before{content:"\eaa1"}.icon-flickr3:before{content:"\eaa2"}.icon-flickr4:before{content:"\eaa3"}.icon-picassa:before{content:"\eaa4"}.icon-picassa2:before{content:"\eaa5"}.icon-dribbble:before{content:"\eaa6"}.icon-dribbble2:before{content:"\eaa7"}.icon-dribbble3:before{content:"\eaa8"}.icon-forrst:before{content:"\eaa9"}.icon-forrst2:before{content:"\eaaa"}.icon-deviantart:before{content:"\eaab"}.icon-deviantart2:before{content:"\eaac"}.icon-steam:before{content:"\eaad"}.icon-steam2:before{content:"\eaae"}.icon-dropbox:before{content:"\eaaf"}.icon-onedrive:before{content:"\eab0"}.icon-github:before{content:"\eab1"}.icon-github2:before{content:"\eab2"}.icon-github3:before{content:"\eab3"}.icon-github4:before{content:"\eab4"}.icon-github5:before{content:"\eab5"}.icon-wordpress:before{content:"\eab6"}.icon-wordpress2:before{content:"\eab7"}.icon-joomla:before{content:"\eab8"}.icon-blogger:before{content:"\eab9"}.icon-blogger2:before{content:"\eaba"}.icon-tumblr:before{content:"\eabb"}.icon-tumblr2:before{content:"\eabc"}.icon-yahoo:before{content:"\eabd"}.icon-tux:before{content:"\eabe"}.icon-apple:before{content:"\eabf"}.icon-finder:before{content:"\eac0"}.icon-android:before{content:"\eac1"}.icon-windows:before{content:"\eac2"}.icon-windows8:before{content:"\eac3"}.icon-soundcloud:before{content:"\eac4"}.icon-soundcloud2:before{content:"\eac5"}.icon-skype:before{content:"\eac6"}.icon-reddit:before{content:"\eac7"}.icon-linkedin:before{content:"\eac8"}.icon-linkedin2:before{content:"\eac9"}.icon-lastfm:before{content:"\eaca"}.icon-lastfm2:before{content:"\eacb"}.icon-delicious:before{content:"\eacc"}.icon-stumbleupon:before{content:"\eacd"}.icon-stumbleupon2:before{content:"\eace"}.icon-stackoverflow:before{content:"\eacf"}.icon-pinterest:before{content:"\ead0"}.icon-pinterest2:before{content:"\ead1"}.icon-xing:before{content:"\ead2"}.icon-xing2:before{content:"\ead3"}.icon-flattr:before{content:"\ead4"}.icon-foursquare:before{content:"\ead5"}.icon-paypal:before{content:"\ead6"}.icon-paypal2:before{content:"\ead7"}.icon-paypal3:before{content:"\ead8"}.icon-yelp:before{content:"\ead9"}.icon-file-pdf:before{content:"\eada"}.icon-file-openoffice:before{content:"\eadb"}.icon-file-word:before{content:"\eadc"}.icon-file-excel:before{content:"\eadd"}.icon-libreoffice:before{content:"\eade"}.icon-html5:before{content:"\eadf"}.icon-html52:before{content:"\eae0"}.icon-css3:before{content:"\eae1"}.icon-git:before{content:"\eae2"}.icon-svg:before{content:"\eae3"}.icon-codepen:before{content:"\eae4"}.icon-chrome:before{content:"\eae5"}.icon-firefox:before{content:"\eae6"}.icon-IE:before{content:"\eae7"}.icon-opera:before{content:"\eae8"}.icon-safari:before{content:"\eae9"}.icon-IcoMoon:before{content:"\eaea"}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
+/*-- global --*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #636363;
+}
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	color: #2b4b6f;
+}
+h2 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	color: #2b4b6f;
+}
+
+h2 .subMsg {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 60%;
+	color: #cc9900;
+}
+
+h2 .export {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 50%;
+	color: #ff9922;
+}
+h2 .dropdown-menu>li>a {
+	font-family: 'Open Sans', sans-serif;
+}
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #cc9900; 	
+}
+p {
+	line-height: 24px;	
+}
+a:hover {
+	text-decoration: none; 		
+}
+
+ul.highlight li { padding: 4px 0px; }
+
+blockquote {
+	font-family: 'Roboto Slab', serif;
+}
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+.footer {
+	background: #2b4b6f;
+}
+.footer h3,
+.footer a {
+	color: #FFF; 	
+	font-size: 14px;
+	margin: 18px 0 0;
+}
+.panel {
+	background-color: #f7f7f9;
+}
+#mainNav {
+	background: #2b4b6f;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 16px;
+	padding: 6px 0;
+}
+
+#mainNav a {
+	color: #FFF;
+}
+
+nav a:hover,
+nav a.active {
+	color: #cc9900;
+}
+
+.navbar {
+	border: none; 
+	border-radius: 0px;
+	background: #eee;
+	background: -moz-linear-gradient(top,  #fbfbfc 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfc), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fbfbfc 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fbfbfc 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fbfbfc 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fbfbfc 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfc', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
+#rankingLogo {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	color: #2b4b6f;
+	font-size: 25px;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 54px;
+}
+
+#rankingBankingNav ul {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/*-- home --*/
+.jumbotron {
+	background: url(../images/nyc_bg.jpg) no-repeat center 20%;
+	background-size: cover; 
+	padding: 35px 0 0;	
+}
+
+#title_section {
+	color: #FFF;
+	text-align: center; 	
+}
+
+#title_section h1 {
+	font-size: 80px;
+	text-shadow: 0px 0px 5px #777;
+	position: relative; 
+	  font-weight: 700;
+}
+#title_section h1 span {
+	font-weight: 700; 	
+}
+.beta {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	line-height: 12px;
+	display: inline;
+	vertical-align: text-top;
+	font-weight: 300;
+}
+
+#title_section h2 {
+	background: #cc9900;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 24px;
+	padding: 3px 15px;
+	display: inline;
+	color: #fff; 
+	line-height: 35px; 
+}
+
+#sms_quote {
+	background: rgba(255,255,255,.6);
+	margin-top: 70px;
+	padding-top: 20px;
+	position: relative; 
+}
+#sms_quote img {
+	bottom: 0;
+	position: absolute; 
+	padding: 0 40px 0 0;
+	max-width: 325px;
+}
+
+#sms_quote p {
+	font-family: georgia, times, times new roman, serif;
+	font-style: italic;
+	font-size: 18px;
+	color: rgba(0,0,0,.8);
+}
+
+#sms_quote p span {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 75%;	
+	font-style: normal; 
+}
+#findBank_promo {
+	margin-top: 0; 
+	background: #f7f7f9 url(../images/find_bank_promo.png) no-repeat 95% center;
+	font-size: 16px;
+	line-height: 24px; 
+	background-size: 40%;
+}
+#findBank_promo h2 {
+	margin-top: 10px; 	
+}
+#findBank_promo a {
+	margin: 10px 0 15px;	
+}
+#findBank_promo ul li .icon {
+	color: #cc9900; 
+}
+#home_panels {
+	margin-top: 35px; 	
+}
+
+#home_panels .icon {
+	font-size: 60px;
+	border: 3px solid #ddd;
+	padding: 20px;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: #cc9900;
+	color: #fff;
+	transition: all 0.2s ease;
+}
+#home_panels .icon:hover {
+	background: #0a58a5;
+	
+}
+#home_panels p {
+	padding: 0 25px;
+	font-size: 16px; 
+}
+
+.modal .alert-warning {
+	display: none; 	
+}
+
+/*-- find a bank --*/
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+	border-bottom: 2px solid #002563;
+}
+
+thead {
+	background: #b8d3ec;
+	z-index: 999;
+}
+#ranking-banking_wrapper col:first-child {
+	background: #d9d9d9;
+}
+
+#ranking-banking_wrapper col:nth-child(2n+3) {
+	background: #e9e9e9;
+}
+
+#ranking-banking_wrapper #ranking-banking_wrapper {
+	position: relative;
+	margin: 20px 0;
+}
+
+#ranking-banking_wrapper td, 
+#ranking-banking_wrapper th, 
+#ranking-banking_wrapper col {
+	width: 20%;
+}
+
+
+#ranking-banking_wrapper thead th .bankName a,
+#ranking_table th {
+	color: #002563;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+}
+
+#ranking_table th {
+  font-size: 14px;
+  line-height: 16px; 
+}
+
+#ranking-banking_wrapper thead th .bankName {
+	display: block;
+}
+
+#ranking-banking_wrapper thead th .bankName .icon {
+	content: "\ea3b";
+	font-size: 75%;
+}
+
+#ranking-banking_wrapper tbody {
+	z-index: 1;
+}
+
+#ranking-banking_wrapper.table>tbody>tr>td, 
+#ranking-banking_wrapper.table>tbody>tr>th, 
+#ranking-banking_wrapper.table>tfoot>tr>td, 
+#ranking-banking_wrapper.table>tfoot>tr>th, 
+#ranking-banking_wrapper.table>thead>tr>td, .table>thead>tr>th {
+	border-top: 1px solid #aaa;
+}
+
+#ranking-banking_wrapper.table>thead>tr>th {
+	border-bottom: 2px solid #000;
+}
+
+#ranking-banking_wrapper .categoryHeader th {
+	background: #2b4b6f;
+	width: 100%;
+	color: #FFF;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	border-right: none !important;
+	border-left: none !important;
+}
+
+#ranking-banking_wrapper.table>thead>tr>th {
+	vertical-align: top;
+}
+
+#ranking-banking_wrapper .categoryHeader th:hover {
+	background: #213955;
+}
+
+#ranking-banking_wrapper .categoryHeader th td {
+	text-indent: -9999px;
+}
+
+#ranking-banking_wrapper .expandtd {
+	display: none;
+}
+
+#ranking-banking_wrapper .categoryHeader th:after {
+	content: "Collapse -";
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 25%;
+}
+
+#ranking-banking_wrapper .expand.categoryHeader th:after {
+	content: "Expand +";
+}
+
+#filter {
+	background: #cc9900;
+	background: #f7f7f9;
+	color: #FFF;
+	color: #0a58a5;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	position: relative;
+	margin-bottom: 25px;
+}
+
+#filter h2 {
+	padding: 15px 20px;
+	background: rgba(0,0,0,.20);
+	background: #cc9900;
+	color: #FFF;
+	margin: 0;
+}
+
+#filter h2 .subMsg {
+	color: #fff;
+}
+
+#filter label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	text-align: center;
+	line-height: 14px;
+	margin-top: 10px;
+	display: block;
+	color: #636363;
+}
+
+#filter form ul {
+	margin: 20px;
+}
+
+#filter ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#filter form li {
+	width: 90px;
+	position: relative;
+	margin: 0 10px;
+	display: block;
+	float: left;
+	width: 8%;
+	margin: 0px 1%; 
+}
+
+#filter form li input[type=checkbox],
+#Language_Assistance button/*,
+.invisibleBt_checkbox*/ {
+	position: absolute;
+	z-index: 7;
+	opacity: 0;
+	cursor: pointer;
+	margin: 0;
+	width: 100%;
+	height: 100%; 
+}
+/*
+.invisibleBt_checkbox {
+	z-index: 8;
+	  background-color: red;
+  opacity: .1;
+}*/
+
+#Language_Assistance #clearLanguageBt {
+	display: none;
+	z-index: 1001;
+	position: relative; 
+}
+#Language_Assistance.open #clearLanguageBt {
+	z-index: 900;	
+}
+
+#Language_Assistance.checked #clearLanguageBt {
+	display: inline-block;
+}
+
+#Language_Assistance button {
+	z-index: 6;	
+}
+#Language_Assistance .dropdown-menu {
+	position: absolute;
+	top: 70%;
+	left: -30px;
+	overflow: hidden; 
+	width: 100px; 
+	color: #636363;
+}
+#Language_Assistance .dropdown-menu option {
+	padding: 3px 8px; 	
+}
+#Language_Assistance .dropdown-menu option:hover {
+	background:#eee; 	
+	cursor: pointer; 
+}
+#filter form li .filter_checkbox {
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	border: 3px solid #ccc;
+	width: 100%;
+}
+
+#filter form li input:checked ~ .filter_checkbox,
+#Language_Assistance.checked .filter_checkbox {
+	background: rgba(255,255,255,.30);
+	border-color: #0a58a5;
+}
+
+.filter_checkbox {
+
+}
+
+.checkmark {
+	display: none;
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+}
+
+#filter form li input:checked ~ .filter_checkbox .checkmark,
+#Language_Assistance.checked .filter_checkbox .checkmark {
+	display: block;
+}
+
+.filter_checkbox img {
+	width: 100%; 	
+}
+#inlineSelect,
+#zipcode {
+	color: #000;
+}
+
+.Zip_Code_form {
+	width: 120px;
+	position: absolute;
+	left: -5px;
+}
+#zipcode {
+	width: 70px;
+	display: block;
+	margin: 0 auto;
+	padding: 1px 5px;
+	border: 1px solid #aaa;
+	border-right: none;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	text-align: left;
+	float: left;
+}
+.Zip_Code_form .btn {
+	-webkit-border-radius: 0px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius: 0px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding: 1px 5px;
+}
+
+#paginationArrowsWrapper button[disabled] {
+	display: none; 
+}
+	
+#paginationArrowsWrapper .paginationArrows {
+	cursor: pointer;
+	z-index: 1001;
+	display: block;
+	position: fixed;
+	top: 50%;
+	font-size: 70px;
+	background-color: transparent;
+	border: none;
+	color: #cc9900; 
+}
+.paginationArrows:hover {
+	opacity: .5;
+}
+
+#paginationArrowsWrapper #tableNext {
+	right: 20px;
+}
+
+#paginationArrowsWrapper #tablePrev {
+	left: 20px;
+}
+@font-face {
+	font-family: 'IcoMoon-Free';
+	src: url('../fonts/IcoMoon-Free.ttf?-b7qzp2') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon,
+#filter form li input:checked ~ .filter_checkbox:before,
+#Language_Assistance.checked .filter_checkbox:before,
+#ranking-banking_wrapper thead th .bankName .icon{
+	font-family: 'IcoMoon-Free';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#filter form li input:checked ~ .filter_checkbox:before,
+#Language_Assistance.checked .filter_checkbox:before {
+	text-align: center;
+}
+
+/*-- ranking --*/
+#ranking_page blockquote {
+	margin-bottom: 0;	
+}
+
+#ranking_table {
+	background: #eee;
+}
+#ranking_table table {
+	background: #fff;
+}
+
+#ranking_table col {
+	width: 25%;	
+}
+
+#ranking_table li {
+	clear: both; 
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	line-height: 22px; 
+}
+#ranking_table ul li span {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+}
+
+#ranking_table h2 {
+	color: #FFF; 
+	margin-left: -30px;	
+	height: 36px;	
+}
+#ranking_table h2:after {
+	content:"";
+	width: 0; 
+	height: 0; 
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-left: 18px solid #01611b;
+	right: -18px;
+	position: absolute;
+	top: 0;
+}
+#ranking_table h2#tier_1 {
+	background: #01611b;
+	margin-top: 0; 	
+}
+#ranking_table h2#tier_1:after {
+	border-left-color: #01611b; 
+}
+#ranking_table h2#tier_2 {
+	background: #327916;	
+}
+#ranking_table h2#tier_2:after {
+	border-left-color: #327916; 
+}
+#ranking_table h2#tier_3 {
+	background: #87a50b;	
+}
+#ranking_table h2#tier_3:after {
+	border-left-color: #87a50b; 
+}
+#ranking_table h2#tier_4 {
+	background: #b3bb07;	
+}
+#ranking_table h2#tier_4:after {
+	border-left-color: #b3bb07; 
+}
+#ranking_table h2#tier_5 {
+	background: #ebcc01;	
+}
+#ranking_table h2#tier_5:after {
+	border-left-color: #ebcc01; 
+}
+#ranking_table h2#tier_6 {
+	background: #ffb302;	
+}
+#ranking_table h2#tier_6:after {
+	border-left-color: #ffb302; 
+}
+#ranking_table h2#tier_7 {
+	background: #ff740a;	
+}
+#ranking_table h2#tier_7:after {
+	border-left-color: #ff740a; 
+}
+#ranking_table h2#tier_8 {
+	background: #f03512;	
+}
+#ranking_table h2#tier_8:after {
+	border-left-color: #f03512; 
+}
+#ranking_table h2#tier_9 {
+	background: #e10119;	
+}
+#ranking_table h2#tier_9:after {
+	border-left-color: #e10119; 
+}
+
+#clearSearch_bt {
+	color: #a94442;
+}
+#clearSearch_bt:hover {
+	color: red;
+}
+#find_bank_page h2 .input-group {
+	font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 768px) {
+	#rankingBankingNav ul li a {
+		border-right: 1px solid #ccc;
+		display: block;
+		border-bottom: 4px solid transparent;
+		color: #636363;
+	}
+	#rankingBankingNav ul li:first-child a {
+		border-left: 1px solid #ccc;
+	}
+	#rankingBankingNav ul li a:hover,
+	#rankingBankingNav ul li a.active {
+		border-bottom-color: #cc9900; 
+	}
+	#rankingBankingNav ul li a.active {
+		color: #cc9900;	
+	}
+	#ranking_table .panel-body {
+		padding: 25px; 	
+	}
+}
+@media (max-width: 1200px) {
+	#rankingBankingNav ul {
+		font-size: 14px;
+	}
+	.footer h3,
+	.footer a {
+		font-size: 12px;
+	}
+}
+@media (max-width: 1000px) {
+	#findBank_promo {
+		background-size: 60%; 	
+		background-position-y: 70%;
+	}
+	.h2, h2 {
+	  font-size: 26px;
+	}
+	#filter form li {
+		width: 16%;
+		margin: 0px 2%;	
+	}
+	#filter #Direct_Deposit {
+		clear: both; 	
+	}
+}
+@media (max-width: 768px) {
+	#title_section h1 {
+		font-size: 60px; 	
+		line-height: 55px;
+	}
+	#title_section h2 {
+		font-size: 18px; 	
+	}
+	#sms_quote p {
+		font-size: 16px; 
+		line-height: 20px; 	
+	}
+	#findBank_promo h2 {
+		font-size: 28px; 	
+	}
+	#home_panels {
+		margin-top: -15px;
+	}
+	#home_panels .col-sm-4 {
+		border-top: 1px solid #ddd;
+		padding:25px 0 15px;  
+	}
+	#home_panels .col-sm-4:first-child {
+		border: none; 
+	}
+	
+	#mainNav { 
+		font-size: 12px;
+	}
+	.nav li {
+		border-bottom: 1px solid #e7e7e7; 	
+	}
+	#filter h2 span {
+		display: none;	
+	}
+	
+	thead th {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	thead th .bankName {
+		font-size: 14px;
+		line-height: 18px;
+		word-break: break-all;
+		white-space: pre-wrap;
+	}
+
+	#tableNext {
+		right: 10px;
+	}
+
+	#tablePrev {
+		left: 10px;
+	};
+
+    #ranking-banking_wrapper_small table,
+    #ranking-banking_wrapper_small tbody {
+        display: block;
+        width: 100%;
+    }
+	
+	#ranking-banking_wrapper_small thead {
+		display: none;
+	}
+	
+	#ranking-banking_wrapper_small table tr,
+    #ranking-banking_wrapper_small table th,
+    #ranking-banking_wrapper_small table td {
+        display: block;
+        padding: 0;
+        text-align: left;
+        white-space: normal;
+    }
+	
+	#ranking-banking_wrapper_small table th[data-title]:before,
+    #ranking-banking_wrapper_small table td[data-title]:before {
+        content: attr(data-title) ":\00A0";
+        font-weight: bold;
+    }
+	#ranking-banking_wrapper_small table td {
+        margin: 3px 0;
+    }
+	
+	#ranking-banking_wrapper_small table td:empty { display: none; }
+	#ranking-banking_wrapper_small table td:first-child {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        color: #333;
+    }
+    #ranking-banking_wrapper_small table td:first-child:before { content: ''; }
+
+	#home_panels p {
+		font-size: 14px; 	
+	}
+	
+	#ranking_table h2 {
+		width: 100%;
+	}
+	
+	#paginationArrowsWrapper {
+		position: fixed;
+		bottom: 0;
+		background: #2b4b6f;
+		padding: 10px 0;
+		left: 0px;
+		width: 100%; 
+		z-index: 2000;
+	}
+	.paginationArrows {
+		font-size: 40px;
+		position: relative; 
+		color: #FFF; 
+		right: auto;
+		left: auto;
+		width: 49%;
+		display: inline-block;
+	}
+	#paginationArrowsWrapper .paginationArrows {
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		color: #fff; 	
+		font-size: 14px; 
+		opacity: 1;
+		position: relative;
+	}
+	.paginationArrows.icon-circle-right:before {
+		content: "Next";
+	}
+	.paginationArrows.icon-circle-left:before {
+		content: "Previous";
+	}
+	#paginationArrowsWrapper .paginationArrows#tableNext {
+		float: right;
+		border-left: 1px solid;
+	}
+	#tablePrev {
+		float: left;
+	}
+	#ranking-banking_wrapper_small table tr td {
+		padding: 5px 10px; 
+	}
+	#ranking-banking_wrapper_small table tr td:first-child {
+		display: block;
+		background: #213955; 
+		
+	}
+	#ranking-banking_wrapper_small table td:first-child div {
+		font-family: 'Open Sans', sans-serif;
+		color: #ccc;
+	}
+	#ranking-banking_wrapper_small table td:first-child div:first-child {
+		color: #fff;
+		font-family: 'Roboto Slab', serif;
+		font-weight: 700;
+		font-size: 20px; 
+	}
+	#ranking-banking_wrapper_small table td[data-title="Minimum Opening Deposit"] {
+		border: none; 
+	}
+	#ranking-banking_wrapper_small table td div {
+		display: inline;	
+	}
+	#ranking-banking_wrapper_small [data-title="Bank Name"] div {
+		display: block;
+	}
+	.table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th {
+		white-space: normal;
+	}
+	
+	#ranking-banking_wrapper_small [data-title="Bank Name"] a {
+		color: #FFF;	
+	}
+	#ranking-banking_wrapper_small [data-title="Bank Name"] a span {
+		font-size: 65%; 	
+	}
+	#find_bank_page h2 .input-group {
+		margin: 10px 0;
+	}
+}
+@media (max-width: 480px) {
+	.h2, h2 {
+		font-size: 20px;
+	}
+	.h3, h3 {
+		font-size: 18px;
+	}
+	.footer h3  {
+		margin: 10px 0 0;
+	}
+	#findBank_promo {
+		background-image: none; 	
+		text-align: center; 
+	}
+	#rankingLogo {
+		font-size: 20px;
+	}
+	#findBank_promo ul {
+		display: none; 	
+	}
+	#filter form li {
+		width: 27%;
+		margin: 0px 3%;
+	}
+	#filter #Evening_Weekend,
+	#filter #Direct_Deposit {
+		clear: none; 	
+	}
+	#filter #Online_Banking,
+	#filter #Accept_IDNYC,
+	#Near_Zipcode {
+		clear: both; 	
+	}
+	
+	#ranking_table col {
+		width:150px;	
+	}
+	#mainNav {
+		padding: 3px 0;
+		font-size: 10px;
+	}
+	h2 .pull-right {
+		float: none !important;
+		margin: 10px 0;
+	}
+	#find_bank_page footer {
+		display: none;	
+	}
+	#ranking_table th {
+		font-size: 12px;
+		line-height: 14px;
+	}
+	#ranking_table {
+		font-size: 85%;	
+	}
+}
+
+@media only screen and (max-device-width: 1024px) {
+	#Language_Assistance button {
+	 display: none;
+	}
+
+	#language_select {
+	display: block !important;
+	width: 100% !important;
+	height: 80% !important;
+	position: absolute !important;
+	background-color: transparent;
+	border: none !important;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 1048 !important;
+	opacity: 0 !important;
+	}
+	
+	#Near_Zipcode {
+		position: relative;
+		z-index: 1049;
+	}
+}
+
+/*for ipad landscape only*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation:landscape){ 
+
+	/*#filter:after {
+	content: 'ipad landscape';
+	}*/
+	#Language_Assistance button {
+		 display: none !important;
+	}
+
+	#Language_Assistance .dropdown-menu {
+		display: block !important;
+		width: 100px !important;
+		height: 100px !important;
+		position: absolute !important;
+		background-color: transparent !important;
+		border: none !important;
+		top: 0 !important;
+		left: -50px !important;
+		z-index: 1048 !important;
+		opacity: 0 !important;
+	}
+	
+	#Near_Zipcode {
+		position: relative;
+		z-index: 1049;
+	}
+
+}
+
+/*
+for ipad only
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation:portrait){ 
+
+	#filter:after {
+		content: 'ipad portrait';
+	}
+	#Language_Assistance button {
+		 display: none !important;
+		 background: red;
+	}
+
+	#Language_Assistance .dropdown-menu {
+	display: block !important;
+	width: 100% !important;
+	height: 80% !important;
+	position: absolute !important;
+	background-color: transparent;
+	border: none !important;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 100000 !important;
+	opacity: 0 !important;
+	}
+}
+*/

@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Uw4CVVZUGwYBV1VWBwQ="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Take It To The Bank"/>
+    <meta property="og:site_name" content="Take It To The Bank" />
+    <meta property="og:description" content="A New Yorker’s Guide To Affordable Checking Options"/>
+    <meta property="og:image" content="http://comptroller.nyc.gov/wp-content/uploads/2015/06/rb_icon.jpg" />
+    <link rel="icon" href="http://comptroller.nyc.gov/wp-content/themes/comptroller_theme/img/favicon.ico">
+	<title>Find a Bank - Take It To The Bank</title>
+    
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,700|Roboto+Slab:300,700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://comptroller.nyc.gov/takeittothebank/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://comptroller.nyc.gov/takeittothebank/css/custom.css">
+	<script src="http://comptroller.nyc.gov/takeittothebank/js/jquery-1.11.2.min.js"></script>
+	<script src="http://comptroller.nyc.gov/takeittothebank/js/bootstrap.min.js"></script>
+	<script src="http://comptroller.nyc.gov/takeittothebank/js/custom.js"></script>
+	
+	<style type="text/css">
+		#map_wrapper {
+			height: 600px;
+		}
+
+		#map_canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+
+<script>
+function popData(){
+	$(".Bank_Name_1").html("<a href=\'https://www.capitalone.com\' target=\'_blank\'>Capital One&nbsp;<span class='icon icon-new-tab'></span></a>");$(".Product_Name_1").html("360 Checking");$(".Branch_Count_1").html("<span class='badge'>5</span> <i>branches in your area</i>");$(".Minimum_Opening_Deposit_1").html("$0");$(".Monthly_Maintenance_Fee_1").html("$0");$(".Minimum_Balance_1").html("Not applicable");$(".Other_Method_1").html("Not applicable");$(".Transactions_Permitted_1").html("Unlimited");$(".Additional_Transaction_Fee_1").html("None");$(".Debit_Card_1").html("Yes");$(".Direct_Deposit_1").html("Yes");$(".Printed_Checks_1").html("Yes");$(".Earn_Interest_1").html("Yes");$(".Link_Savings_Account_1").html("No");$(".ATM_Fee_1").html("$0");$(".Foreign_Transaction_Fee_1").html("$0");$(".Stop_Payment_Fee_1").html("$25");$(".Returned_Check_Fee_1").html("$0");$(".Check_Cashing_Fee_1").html("Service not available");$(".Overdraft_Fee_1").html("Overdrawing is generally not available. A $9 fee may be charged if a customer writes a check that exceeds their balance (this does not apply to electronic payments).");$(".Online_Banking_1").html("Yes");$(".Online_Statements_1").html("Yes");$(".Online_Bill_Pay_1").html("Yes");$(".Mobile_App_1").html("Yes");$(".Language_Assistance_1").html("Varies");$(".Rewards_Points_1").html("No");$(".Second_Chance_Account_1").html("No");$(".Evening_Weekend_1").html("Yes");$(".Branches_1").html("133");$(".Bank_Owned_ATMs_1").html("192");$(".Non_Bank_Owned_ATMs_1").html(">1,000");$(".Wire_Transfer_Fees_DO_1").html("$40 if bank agrees to transact a wire");$(".Wire_Transfer_Fees_DI_1").html("$0");$(".Wire_Transfer_Fees_IO_1").html("Service not available");$(".Wire_Transfer_Fees_II_1").html("Service not available");$(".Accept_IDNYC_1").html("Not Yet Determined/Unknown");$(".Accept_Secondary_ID_1").html("Employee photo ID, credit card, public assistance card with photo, voter registration card, Medicare/Medicaid card, insurance card");$(".Bank_Name_2").html("<a href=\'https://www.cathaybank.com\' target=\'_blank\'>Cathay Bank&nbsp;<span class='icon icon-new-tab'></span></a>");$(".Product_Name_2").html("Basic Checking");$(".Branch_Count_2").html("<span class='badge'>2</span> <i>branches in your area</i>");$(".Minimum_Opening_Deposit_2").html("$10");$(".Monthly_Maintenance_Fee_2").html("$0");$(".Minimum_Balance_2").html("Not applicable");$(".Other_Method_2").html("Not applicable");$(".Transactions_Permitted_2").html("Unlimited");$(".Additional_Transaction_Fee_2").html("None");$(".Debit_Card_2").html("Yes");$(".Direct_Deposit_2").html("Yes");$(".Printed_Checks_2").html("Yes");$(".Earn_Interest_2").html("No");$(".Link_Savings_Account_2").html("Yes");$(".ATM_Fee_2").html("$2");$(".Foreign_Transaction_Fee_2").html("1%");$(".Stop_Payment_Fee_2").html("$30");$(".Returned_Check_Fee_2").html("$5");$(".Check_Cashing_Fee_2").html("Service not available");$(".Overdraft_Fee_2").html("$25 on the 7th overdraft");$(".Online_Banking_2").html("Yes");$(".Online_Statements_2").html("Yes");$(".Online_Bill_Pay_2").html("Yes");$(".Mobile_App_2").html("Yes");$(".Language_Assistance_2").html("Cantonese, Mandarin");$(".Rewards_Points_2").html("No");$(".Second_Chance_Account_2").html("No");$(".Evening_Weekend_2").html("Yes");$(".Branches_2").html("9");$(".Bank_Owned_ATMs_2").html("7");$(".Non_Bank_Owned_ATMs_2").html("0");$(".Wire_Transfer_Fees_DO_2").html("$30");$(".Wire_Transfer_Fees_DI_2").html("$10");$(".Wire_Transfer_Fees_IO_2").html("$40");$(".Wire_Transfer_Fees_II_2").html("$10");$(".Accept_IDNYC_2").html("Not Yet Determined/Unknown");$(".Accept_Secondary_ID_2").html("Debit card, credit card, student ID, Medicare, or insurance card for seniors");$(".Bank_Name_3").html("<a href=\'https://www.popularcommunitybank.com\' target=\'_blank\'>Popular Community Bank&nbsp;<span class='icon icon-new-tab'></span></a>");$(".Product_Name_3").html("Popular Checking");$(".Branch_Count_3").html("<span class='badge'>2</span> <i>branches in your area</i>");$(".Minimum_Opening_Deposit_3").html("$25");$(".Monthly_Maintenance_Fee_3").html("$0");$(".Minimum_Balance_3").html("Not applicable");$(".Other_Method_3").html("Not applicable");$(".Transactions_Permitted_3").html("Unlimited");$(".Additional_Transaction_Fee_3").html("None");$(".Debit_Card_3").html("Yes");$(".Direct_Deposit_3").html("Yes");$(".Printed_Checks_3").html("Yes");$(".Earn_Interest_3").html("No");$(".Link_Savings_Account_3").html("Yes");$(".ATM_Fee_3").html("$0");$(".Foreign_Transaction_Fee_3").html("1 point service fee, merchant services and currency exchange");$(".Stop_Payment_Fee_3").html("$30");$(".Returned_Check_Fee_3").html("$10");$(".Check_Cashing_Fee_3").html("Service not available");$(".Overdraft_Fee_3").html("$30");$(".Online_Banking_3").html("Yes");$(".Online_Statements_3").html("Yes");$(".Online_Bill_Pay_3").html("Yes");$(".Mobile_App_3").html("Yes");$(".Language_Assistance_3").html("Spanish");$(".Rewards_Points_3").html("No");$(".Second_Chance_Account_3").html("Case by case");$(".Evening_Weekend_3").html("Yes");$(".Branches_3").html("24");$(".Bank_Owned_ATMs_3").html("61");$(".Non_Bank_Owned_ATMs_3").html(">1,000");$(".Wire_Transfer_Fees_DO_3").html("$30");$(".Wire_Transfer_Fees_DI_3").html("$10");$(".Wire_Transfer_Fees_IO_3").html("$40");$(".Wire_Transfer_Fees_II_3").html("$10");$(".Accept_IDNYC_3").html("Not Yet Determined/Unknown");$(".Accept_Secondary_ID_3").html("Benefit card with picture");$(".Bank_Name_4").html("<a href=\'https://www.amalgamatedbank.com\' target=\'_blank\'>Amalgamated Bank&nbsp;<span class='icon icon-new-tab'></span></a>");$(".Product_Name_4").html("Affordable Checking");$(".Branch_Count_4").html("<span class='badge'>1</span> <i>branch in your area</i>");$(".Minimum_Opening_Deposit_4").html("$0");$(".Monthly_Maintenance_Fee_4").html("$0");$(".Minimum_Balance_4").html("Not applicable");$(".Other_Method_4").html("Not applicable");$(".Transactions_Permitted_4").html("Unlimited");$(".Additional_Transaction_Fee_4").html("None");$(".Debit_Card_4").html("Yes");$(".Direct_Deposit_4").html("Yes");$(".Printed_Checks_4").html("Yes");$(".Earn_Interest_4").html("No");$(".Link_Savings_Account_4").html("No");$(".ATM_Fee_4").html("$1.50");$(".Foreign_Transaction_Fee_4").html("$1.50");$(".Stop_Payment_Fee_4").html("$35");$(".Returned_Check_Fee_4").html("$10");$(".Check_Cashing_Fee_4").html("$0");$(".Overdraft_Fee_4").html("$34");$(".Online_Banking_4").html("Yes");$(".Online_Statements_4").html("Yes");$(".Online_Bill_Pay_4").html("Yes");$(".Mobile_App_4").html("Yes");$(".Language_Assistance_4").html("Varies");$(".Rewards_Points_4").html("No");$(".Second_Chance_Account_4").html("Yes");$(".Evening_Weekend_4").html("Yes");$(".Branches_4").html("14");$(".Bank_Owned_ATMs_4").html("29");$(".Non_Bank_Owned_ATMs_4").html(">1,000");$(".Wire_Transfer_Fees_DO_4").html("$33");$(".Wire_Transfer_Fees_DI_4").html("$15");$(".Wire_Transfer_Fees_IO_4").html("Service not available");$(".Wire_Transfer_Fees_II_4").html("$15");$(".Accept_IDNYC_4").html("Accepted");$(".Accept_Secondary_ID_4").html("US Military ID, US Global Entry Card, Passport, NYC Benefits Card or Public Assistance Card, Resident Alien ID, INS Work Authorization, Certificate of US naturalization, Certificate of citizenship, Mexican consular ID (all unexpired and with photo)");}
+</script>
+
+
+<link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+<!-- <script src="http://js.arcgis.com/3.14/"></script> -->
+
+<script type="text/javascript">
+	jQuery(function($) {
+		// Asynchronously Load the map API 
+		var script = document.createElement('script');
+		script.src = "http://js.arcgis.com/3.14/?callback=initialize";
+		document.body.appendChild(script);
+	});
+
+	function initialize() {
+		var map;
+		var bounds = new google.maps.LatLngBounds();
+		var mapOptions = {
+			mapTypeId: 'roadmap'
+		};
+						
+		// Display a map on the page
+		map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+		map.setTilt(45);
+			
+		// Multiple Markers
+		var markers = [
+		['Amalgamated Bank', 40.735495,-73.993129],['Capital One', 40.72165,-73.980291],['Capital One', 40.731581,-73.994781],['Capital One', 40.732944,-73.986949],['Capital One', 40.729778,-73.987136],['Capital One', 40.737201,-73.98963],['Cathay Bank', 40.713367,-73.995898],['Cathay Bank', 40.713725,-73.997205],['East West Bank', 40.71658,-73.995426],['Flushing Bank', 40.737109,-73.987892],['Ponce De Leon Federal Bank', 40.734238,-73.980878],['Popular Community Bank', 40.721374,-73.982947],['Popular Community Bank', 40.7185,-73.987078],		];
+
+		// Info Window Content
+		var infoWindowContent = [
+		['<div class="info_content"><h4>Amalgamated Bank</h4><p>10 East 14th Street<br>New York, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>273 EAST 3RD STREET<br>NEW YORK, NY 10009</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>21 University Place<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>123 3rd avenue<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>159 2ND AVE<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Capital One</h4><p>31 EAST 17TH STREET<br>NEW YORK, NY 10003</p></div>'],['<div class="info_content"><h4>Cathay Bank</h4><p>45 East Broadway<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>Cathay Bank</h4><p>16-18 East Broadway<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>East West Bank</h4><p>77 Bowery<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>Flushing Bank</h4><p>225 Park Avenue South<br>New York, NY 10003</p></div>'],['<div class="info_content"><h4>Ponce De Leon Federal Bank</h4><p>319 First Avenue<br>New York, NY 10003</p></div>'],['<div class="info_content"><h4>Popular Community Bank</h4><p>310 East Houston Street<br>New York, NY 10002</p></div>'],['<div class="info_content"><h4>Popular Community Bank</h4><p>134 Delancey Street<br>New York, NY 10002</p></div>'],		];
+			
+		// Display multiple markers on a map
+		var infoWindow = new google.maps.InfoWindow(), marker, i;
+		
+		// Loop through our array of markers & place each one on the map  
+		for( i = 0; i < markers.length; i++ ) {
+			var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+			bounds.extend(position);
+			marker = new google.maps.Marker({
+				position: position,
+				map: map,
+				title: markers[i][0]
+			});
+			
+			// Allow each marker to have an info window    
+			google.maps.event.addListener(marker, 'click', (function(marker, i) {
+				return function() {
+					infoWindow.setContent(infoWindowContent[i][0]);
+					infoWindow.open(map, marker);
+				}
+			})(marker, i));
+
+			// Automatically center the map fitting all markers on the screen
+			map.fitBounds(bounds);
+		}
+
+		// Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+		var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+			//this.setZoom(15);
+			map.fitBounds(bounds);
+			google.maps.event.removeListener(boundsListener);
+		});
+	};
+</script>
+
+<body id="find_bank_page">
+	<div id="mainNav">
+        <div class="container">
+            <div class="pull-left visible-lg  visible-md"><a href="http://comptroller.nyc.gov/" target="_blank">Office of the New York City Comptroller Scott M. Stringer</a></div>
+            <div class="pull-left visible-sm  visible-xs"><a href="http://comptroller.nyc.gov/" target="_blank">NYC Comptroller Scott M. Stringer</a></div>
+            <a style="display: none;" class="pull-right" data-toggle="modal" data-target="#myModal" href="javascript:void(0)"><span class="icon icon-bubble"></span> Send us Feedback</a>
+        </div>
+    </div>
+
+     <nav class="navbar navbar-default">   
+        <div class="container">
+	        <div class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rankingBankingNav" aria-expanded="true" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="rankingLogo" class="pull-left" href="index.php">Take It To The Bank<div class="beta">Beta</div></a>
+			</div>
+            <div id="rankingBankingNav"  class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="find_a_bank.php" class="active"><span class="icon icon-library"></span> Find a Bank</a></li>
+                    <li><a href="ranking.html"><span class="icon icon-stats-bars"></span> Rankings</a></li>
+                    <li><a href="report.html"><span class="icon icon-newspaper"></span> Report</a></li>
+                </ul>
+            </div>
+        </div>
+	</nav>
+
+	<div class="container">
+		<div id="filter">
+		<form id="bank_search" name="find_a_bank" action="/takeittothebank/find_a_bank.php" method="POST" onsubmit="getclassname();">
+			<h2>What features do you need in a bank? <span class="subMsg"> Check as many as you wish.</span></h2>
+                <ul class="list-unstyled">
+
+					<li id="Monthly_Maintenance_Fee">
+						<input type="checkbox" id="inlineCheckbox2" name="Monthly_Maintenance_Fee" value="None" onclick="submitform();" checked='checked' />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_maintenance_fee.png"></div>
+						<label>No monthly maintenance fee</label>
+					</li>
+
+					<li id="Transactions_Permitted">
+						<input type="checkbox" id="inlineCheckbox3" name="Transactions_Permitted" value="Unlimited" onclick="submitform();" checked='checked' />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_free_transactions.png"></div>
+						<label>Unlimited free transactions</label>
+					</li>
+
+					<li id="Evening_Weekend">
+						<input type="checkbox" id="inlineCheckbox4" name="Evening_Weekend" value="Yes" onclick="submitform();"  />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_evening_hours.png"></div>
+						<label>Open Evening or Weekend</label>
+					</li>
+
+					<li id="Online_Banking">
+						<input type="checkbox" id="inlineCheckbox6" name="Online_Banking" value="Yes" onclick="submitform();"  />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_online_banking.png"></div>
+						<label>Online Banking</label>
+					</li>
+
+					<li id="Online_Bill_Pay">
+						<input type="checkbox" id="inlineCheckbox7" name="Online_Bill_Pay" value="Yes" onclick="submitform();"  />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_online_billpay.png"></div>
+						<label>Online Bill Payment</label>
+					</li>
+
+					<li id="Direct_Deposit">
+						<input type="checkbox" id="inlineCheckbox8" name="Direct_Deposit" value="Yes" onclick="submitform();"  />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_direct_deposit.png"></div>
+						<label>Direct Deposit</label>
+					</li>
+                    
+                    <li id="Accept_IDNYC">
+						<input type="checkbox" id="inlineCheckbox8" name="Accept_IDNYC" value="Yes" onclick="submitform();"  />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_idnyc.png"></div>
+						<label>Accepts IDNYC</label>
+					</li>
+                    
+                    <li id="Lifeline">
+						<input type="checkbox" id="inlineCheckbox1" name="Lifeline" value="Yes" onclick="submitform();"  />
+						<div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_lifeline.png"></div>
+						<label>Meets / Exceeds Lifeline Requirements<span style="font-family: aria; font-size: 110%;">*</span></label>
+					</li>
+
+					<li id="Language_Assistance" >
+                        <button id="inlineCheckbox9" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></button>
+                        <div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_languages.png"></div>
+                        <label>Language Assistance</label>
+                        <select name="Language_Assistance" id="language_select" class="dropdown-menu" role="menu" onchange="submitform();" size="29">
+							<option value="Albanian" >Albanian</option>
+							<option value="Arabic" >Arabic</option>
+                            <option value="Bangladeshi" >Bangladeshi</option>
+                            <option value="Bengali" >Bengali</option>
+							<option value="Bosnian" >Bosnian</option>
+                            <option value="Burmese" >Burmese</option>
+                            <option value="Cantonese" >Cantonese</option>
+                            <option value="French Creole" >Creole</option>
+							<option value="Filipino" >Filipino</option>
+                            <option value="French" >French</option>
+							<option value="German" >German</option>
+                            <option value="Greek" >Greek</option>
+                            <option value="Gujarti" >Gujarti</option>
+                            <option value="Hindi" >Hindi</option>
+                            <option value="Italian" >Italian</option>
+                            <option value="Korean" >Korean</option>							
+                            <option value="Malayalam" >Malayalam</option>
+                            <option value="Mandarin" >Mandarin</option>
+                            <option value="Polish" >Polish</option>
+                            <option value="Portuguese" >Portuguese</option>
+                            <option value="Punjabi" >Punjabi</option>
+							<option value="Romanian" >Romanian</option>
+							<option value="Russian" >Russian</option>
+							<option value="Spanish" >Spanish</option>
+							<option value="Ukrainian" >Ukrainian</option>
+							<option value="Urdu" >Urdu</option>
+							<option value="Vietnamese" >Vietnamese</option>
+							<option value="Yiddish" >Yiddish</option>
+                            <option value="Yoruba" >Yoruba</option>
+                            <option value="None" style="visibility:hidden"></option>
+                        </select>
+						<center><a id="clearLanguageBt" class="btn btn-default btn-xs" onclick="ClearLanguage();">Clear</a></center>
+					</li>
+
+					<li id="Near_Zipcode">
+                        <input type="checkbox" id="Zipcode_Check" name="Near_Zipcode" value="Yes" onClick="Zip_Submit()" checked="checked" />
+                        <div class="filter_checkbox"><div class="checkmark"><img src="http://comptroller.nyc.gov/takeittothebank/images/checkmark.png"></div><img src="http://comptroller.nyc.gov/takeittothebank/images/icon_color_zipcodev.png"></div>
+                        <label>Near My<br /><span>Zip Code</span></label>
+                        <div class="Zip_Code_form">
+                        	<input type="number" name="Zipcode" id="zipcode" maxlength="5" value="10009" placeholder="Zip Code">
+							<button type="submit" class="btn btn-primary" name="apply">Go</button>
+                        </div>
+					</li>
+				</ul>
+
+				<div id="hidden_fields">
+					<input type="hidden" name="displaystart" value="1" />
+					<input type="hidden" name="displayend" value="4" />
+					<input type="hidden" name="currentstart" value="0" />
+					<input type="hidden" name="currentend" value="4" />
+					<input type="hidden" id="Core" name="Core_Features_Class" value="categoryHeader" />
+					<input type="hidden" id="Core_Sub" name="Core_Features_Class_Sub" value="Core_Features categoryPanel" />
+					<input type="hidden" id="Other" name="otherCommonFeatures_Class" value="categoryHeader" />
+					<input type="hidden" id="Other_Sub" name="otherCommonFeatures_Class_Sub" value="otherCommonFeatures categoryPanel" />
+					<input type="hidden" id="Common" name="commonFees_Class" value="categoryHeader" />
+					<input type="hidden" id="Common_Sub" name="commonFees_Class_Sub" value="commonFees categoryPanel" />
+					<input type="hidden" id="Online" name="onlineServices_Class" value="categoryHeader" />
+					<input type="hidden" id="Online_Sub" name="onlineServices_Class_Sub" value="onlineServices categoryPanel" />					
+					<input type="hidden" id="Services" name="Other_Services_Class" value="categoryHeader" />
+					<input type="hidden" id="Services_Sub" name="Other_Services_Class_Sub" value="Other_Services categoryPanel" />					
+					<input type="hidden" id="ATMBranch" name="ATMBranchAccess_Class" value="categoryHeader" />
+					<input type="hidden" id="ATMBranch_Sub" name="ATMBranchAccess_Class_Sub" value="ATMBranchAccess categoryPanel" />					
+					<input type="hidden" id="WireTransfer" name="wireTransferFees_Class" value="categoryHeader" />
+					<input type="hidden" id="WireTransfer_Sub" name="wireTransferFees_Class_Sub" value="wireTransferFees categoryPanel" />					
+					<input type="hidden" id="AcceptID" name="acceptedID_Class" value="categoryHeader" />
+					<input type="hidden" id="AcceptID_Sub" name="acceptedID_Class_Sub" value="acceptedID categoryPanel" />	
+					<input type="hidden" id="hidSearchField" name="hidSearchField" value="" />					
+				</div>
+				
+				<div id="paginationArrowsWrapper">
+					<button id="tableNext" class="paginationArrows icon icon-circle-right" type="submit" name="next"></button>
+					<button id="tablePrev" class="paginationArrows icon icon-circle-left" type="submit" name="prev"></button>
+				</div>
+		</form>
+		</div>
+
+	<script>
+		function EnablePageChange(){
+			if (4 == 7) {document.getElementById("tableNext").disabled = true;}
+			if (1 <= 1) {document.getElementById("tablePrev").disabled = true;}
+		}
+		window.onload = EnablePageChange;
+
+		function getclassname () {
+			document.getElementById("Core").value = (document.getElementById("Core_Features").className);
+			document.getElementById("Core_Sub").value = (document.getElementById("Core_Features_Sub").className);
+			document.getElementById("Other").value = (document.getElementById("otherCommonFeatures").className);
+			document.getElementById("Other_Sub").value = (document.getElementById("otherCommonFeatures_Sub").className);
+			document.getElementById("Common").value = (document.getElementById("commonFees").className);
+			document.getElementById("Common_Sub").value = (document.getElementById("commonFees_Sub").className);
+			document.getElementById("Online").value = (document.getElementById("onlineServices").className);
+			document.getElementById("Online_Sub").value = (document.getElementById("onlineServices_Sub").className);
+			document.getElementById("Services").value = (document.getElementById("Other_Services").className);
+			document.getElementById("Services_Sub").value = (document.getElementById("Other_Services_Sub").className);
+			document.getElementById("ATMBranch").value = (document.getElementById("ATMBranchAccess").className);
+			document.getElementById("ATMBranch_Sub").value = (document.getElementById("ATMBranchAccess_Sub").className);
+			document.getElementById("WireTransfer").value = (document.getElementById("wireTransferFees").className);
+			document.getElementById("WireTransfer_Sub").value = (document.getElementById("wireTransferFees_Sub").className);
+			document.getElementById("AcceptID").value = (document.getElementById("acceptedID").className);
+			document.getElementById("AcceptID_Sub").value = (document.getElementById("acceptedID_Sub").className);
+			document.getElementById("hidSearchField").value=document.getElementById("txtSearchField").value;
+		}		
+		
+		function submitform() {
+			getclassname();
+			document.find_a_bank.submit();
+		}
+		
+		function ClearLanguage() {
+			document.getElementById("language_select").value = "None";
+			document.getElementById("Language_Assistance").className = "open";
+			submitform();
+		}
+		
+		function Zip_Submit() {
+			if (document.getElementById('Zipcode_Check').checked) {}
+			else {
+				document.getElementById("zipcode").value="";
+				submitform();
+			}
+		}
+
+		function searchBanks() {
+			if (document.getElementById('txtSearchField').value!="") {
+				submitform();
+			}
+		}
+
+		function clearSearch() {
+			document.getElementById("txtSearchField").value="";
+			submitform();
+		}
+	</script>
+	
+				
+				
+		<h2>Compare Banks <span class="subMsg"> Showing 1 - 4 of 7</span> 
+		
+            <div class="pull-right">
+            	<form class="form-inline" name="search">
+  					<div class="input-group">
+      					<input type="text" class="form-control" placeholder="Search" id="txtSearchField" name="txtSearchField" value="" onkeydown="if (event.keyCode == 13) {return false;}">
+
+      					<span class="input-group-btn">
+      						        					<button class="btn btn-primary" type="button" onclick="searchBanks();"><span class="icon icon-search"></span></button>
+      					</span>
+    				</div>
+				
+                
+				<div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Export Results <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="assets/CompleteDataset.xlsx" target="_blank">Export All Banks</a></li>
+                    <li><a href="export.php">Export Matched Banks Only</a></li>
+                  </ul>
+                </div>				<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Map Results</button>				</form>
+            </div>
+		</h2>
+		
+		<!--table for desktop sizes -->
+		<div id="ranking-banking_wrapper" class="dataTables_wrapper no-footer hidden-xs">
+			
+			<table cellpadding="10" class="table" >
+				<colgroup>
+					<col><col><col><col><col>				</colgroup>
+				<thead>
+					<tr>
+						<th class="headcol"></th>
+						<th><div class="Bank_Name_1 bankName"/></div><div class="Product_Name_1"></div><div class="Branch_Count_1"></div></th><th><div class="Bank_Name_2 bankName"/></div><div class="Product_Name_2"></div><div class="Branch_Count_2"></div></th><th><div class="Bank_Name_3 bankName"/></div><div class="Product_Name_3"></div><div class="Branch_Count_3"></div></th><th><div class="Bank_Name_4 bankName"/></div><div class="Product_Name_4"></div><div class="Branch_Count_4"></div></th>					</tr>
+				</thead>
+				<tbody>
+					<tr id="Core_Features" class="categoryHeader">
+						<th colspan="5">Core Features</th>
+					</tr>
+					<tr id="Core_Features_Sub" class="Core_Features categoryPanel">
+						<th>Minimum Opening Deposit</th>
+						<td><div class="Minimum_Opening_Deposit_1"></div></td><td><div class="Minimum_Opening_Deposit_2"></div></td><td><div class="Minimum_Opening_Deposit_3"></div></td><td><div class="Minimum_Opening_Deposit_4"></div></td>					</tr>
+					<tr class="Core_Features categoryPanel">
+						<th>Monthly Maintenance Fees</th>
+						<td><div class="Monthly_Maintenance_Fee_1"></div></td><td><div class="Monthly_Maintenance_Fee_2"></div></td><td><div class="Monthly_Maintenance_Fee_3"></div></td><td><div class="Monthly_Maintenance_Fee_4"></div></td>					</tr>
+					<tr class="Core_Features categoryPanel">
+						<th>Minimum Balance to Waive Monthly Fee</th>
+						<td><div class="Minimum_Balance_1"></div></td><td><div class="Minimum_Balance_2"></div></td><td><div class="Minimum_Balance_3"></div></td><td><div class="Minimum_Balance_4"></div></td>					</tr>
+					<tr class="Core_Features categoryPanel">
+						<th>Other Methods to Waive Monthly Fee</th>
+						<td><div class="Other_Method_1"></div></td><td><div class="Other_Method_2"></div></td><td><div class="Other_Method_3"></div></td><td><div class="Other_Method_4"></div></td>					</tr>
+					<tr class="Core_Features categoryPanel">
+						<th>Number of Transactions Permitted Before a Fee</th>
+						<td><div class="Transactions_Permitted_1"></div></td><td><div class="Transactions_Permitted_2"></div></td><td><div class="Transactions_Permitted_3"></div></td><td><div class="Transactions_Permitted_4"></div></td>					</tr>
+					<tr class="Core_Features categoryPanel">
+						<th>Fee Per Additional Transaction</th>
+						<td><div class="Additional_Transaction_Fee_1"></div></td><td><div class="Additional_Transaction_Fee_2"></div></td><td><div class="Additional_Transaction_Fee_3"></div></td><td><div class="Additional_Transaction_Fee_4"></div></td>					</tr>
+
+					<tr id="otherCommonFeatures" class="categoryHeader">
+						<th colspan="5">Other Common Features</th>
+					</tr>
+					<tr id="otherCommonFeatures_Sub" class="otherCommonFeatures categoryPanel">
+						<th>Debit Card Available</th>
+						<td><div class="Debit_Card_1"></div></td><td><div class="Debit_Card_2"></div></td><td><div class="Debit_Card_3"></div></td><td><div class="Debit_Card_4"></div></td>					</tr>
+					<tr class="otherCommonFeatures categoryPanel">
+						<th>Direct Deposit Available</th>
+						<td><div class="Direct_Deposit_1"></div></td><td><div class="Direct_Deposit_2"></div></td><td><div class="Direct_Deposit_3"></div></td><td><div class="Direct_Deposit_4"></div></td>					</tr>
+					<tr class="otherCommonFeatures categoryPanel">
+						<th>Printed Checks Available</th>
+						<td><div class="Printed_Checks_1"></div></td><td><div class="Printed_Checks_2"></div></td><td><div class="Printed_Checks_3"></div></td><td><div class="Printed_Checks_4"></div></td>					</tr>
+					<tr class="otherCommonFeatures categoryPanel">
+						<th>Account Earns Interest</th>
+						<td><div class="Earn_Interest_1"></div></td><td><div class="Earn_Interest_2"></div></td><td><div class="Earn_Interest_3"></div></td><td><div class="Earn_Interest_4"></div></td>					</tr>
+					<tr class="otherCommonFeatures categoryPanel">
+						<th>Account Can Link to a Savings Account</th>
+						<td><div class="Link_Savings_Account_1"></div></td><td><div class="Link_Savings_Account_2"></div></td><td><div class="Link_Savings_Account_3"></div></td><td><div class="Link_Savings_Account_4"></div></td>					</tr>
+
+					<tr id="commonFees" class="categoryHeader">
+						<th colspan="5">Common Fees</th>
+					</tr>
+					<tr id="commonFees_Sub" class="commonFees categoryPanel">
+						<th>Fees Applied by Bank When Using a Domestic ATM Not Owned or In-Network</th>
+						<td><div class="ATM_Fee_1"></div></td><td><div class="ATM_Fee_2"></div></td><td><div class="ATM_Fee_3"></div></td><td><div class="ATM_Fee_4"></div></td>					</tr>
+					<tr class="commonFees categoryPanel">
+						<th>Foreign Transaction Fees</th>
+						<td><div class="Foreign_Transaction_Fee_1"></div></td><td><div class="Foreign_Transaction_Fee_2"></div></td><td><div class="Foreign_Transaction_Fee_3"></div></td><td><div class="Foreign_Transaction_Fee_4"></div></td>					</tr>
+					<tr class="commonFees categoryPanel">
+						<th>Stop Payment Fee</th>
+						<td><div class="Stop_Payment_Fee_1"></div></td><td><div class="Stop_Payment_Fee_2"></div></td><td><div class="Stop_Payment_Fee_3"></div></td><td><div class="Stop_Payment_Fee_4"></div></td>					</tr>
+					<tr class="commonFees categoryPanel">
+						<th>Returned Item Fee</th>
+						<td><div class="Returned_Check_Fee_1"></div></td><td><div class="Returned_Check_Fee_2"></div></td><td><div class="Returned_Check_Fee_3"></div></td><td><div class="Returned_Check_Fee_4"></div></td>					</tr>
+					<tr class="commonFees categoryPanel">
+						<th>Check Cashing Fee Service</th>
+						<td><div class="Check_Cashing_Fee_1"></div></td><td><div class="Check_Cashing_Fee_2"></div></td><td><div class="Check_Cashing_Fee_3"></div></td><td><div class="Check_Cashing_Fee_4"></div></td>					</tr>
+					<tr class="commonFees categoryPanel">
+						<th>Overdraft Fee (If Service Available)</th>
+						<td><div class="Overdraft_Fee_1"></div></td><td><div class="Overdraft_Fee_2"></div></td><td><div class="Overdraft_Fee_3"></div></td><td><div class="Overdraft_Fee_4"></div></td>					</tr>
+
+					<tr id="onlineServices" class="categoryHeader">
+						<th colspan="5">Online Services</th>
+					</tr>
+					<tr id="onlineServices_Sub" class="onlineServices categoryPanel">
+						<th>Online Banking</th>
+						<td><div class="Online_Banking_1"></div></td><td><div class="Online_Banking_2"></div></td><td><div class="Online_Banking_3"></div></td><td><div class="Online_Banking_4"></div></td>					</tr>
+					<tr class="onlineServices categoryPanel">
+						<th>Online Bank Statements </th>
+						<td><div class="Online_Statements_1"></div></td><td><div class="Online_Statements_2"></div></td><td><div class="Online_Statements_3"></div></td><td><div class="Online_Statements_4"></div></td>					</tr>
+					<tr class="onlineServices categoryPanel">
+						<th>Online Bill Pay</th>
+						<td><div class="Online_Bill_Pay_1"></div></td><td><div class="Online_Bill_Pay_2"></div></td><td><div class="Online_Bill_Pay_3"></div></td><td><div class="Online_Bill_Pay_4"></div></td>					</tr>
+					<tr class="onlineServices categoryPanel">
+						<th>Mobile App</th>
+						<td><div class="Mobile_App_1"></div></td><td><div class="Mobile_App_2"></div></td><td><div class="Mobile_App_3"></div></td><td><div class="Mobile_App_4"></div></td>					</tr>
+
+					<tr id="Other_Services" class="categoryHeader">
+						<th colspan="5">Other Services</th>
+					</tr>
+					<tr id="Other_Services_Sub" class="Other_Services categoryPanel">
+						<th>Language Assistance (other than English)</th>
+						<td><div class="Language_Assistance_1"></div></td><td><div class="Language_Assistance_2"></div></td><td><div class="Language_Assistance_3"></div></td><td><div class="Language_Assistance_4"></div></td>					</tr>
+					<tr class="Other_Services categoryPanel">
+						<th>Reward / Points</th>
+						<td><div class="Rewards_Points_1"></div></td><td><div class="Rewards_Points_2"></div></td><td><div class="Rewards_Points_3"></div></td><td><div class="Rewards_Points_4"></div></td>					</tr>
+					<tr class="Other_Services categoryPanel">
+						<th>Second Chance Accounts</th>
+						<td><div class="Second_Chance_Account_1"></div></td><td><div class="Second_Chance_Account_2"></div></td><td><div class="Second_Chance_Account_3"></div></td><td><div class="Second_Chance_Account_4"></div></td>					</tr>
+					<tr class="Other_Services categoryPanel">
+						<th>Evening / Weekend Hours</th>
+						<td><div class="Evening_Weekend_1"></div></td><td><div class="Evening_Weekend_2"></div></td><td><div class="Evening_Weekend_3"></div></td><td><div class="Evening_Weekend_4"></div></td>					</tr>
+
+					<tr id="ATMBranchAccess" class="categoryHeader">
+						<th colspan="5">ATM & Branch Access</th>
+					</tr>
+					<tr id="ATMBranchAccess_Sub" class="ATMBranchAccess categoryPanel">
+						<th>Number of NYC Branches</th>
+						<td><div class="Branches_1"></div></td><td><div class="Branches_2"></div></td><td><div class="Branches_3"></div></td><td><div class="Branches_4"></div></td>					</tr>
+					<tr class="ATMBranchAccess categoryPanel">
+						<th>Number of NYC Bank Owned ATMs</th>
+						<td><div class="Bank_Owned_ATMs_1"></div></td><td><div class="Bank_Owned_ATMs_2"></div></td><td><div class="Bank_Owned_ATMs_3"></div></td><td><div class="Bank_Owned_ATMs_4"></div></td>					</tr>
+					<tr class="ATMBranchAccess categoryPanel">
+						<th>Number of NYC Networked ATMs Without Surcharge</th>
+						<td><div class="Non_Bank_Owned_ATMs_1"></div></td><td><div class="Non_Bank_Owned_ATMs_2"></div></td><td><div class="Non_Bank_Owned_ATMs_3"></div></td><td><div class="Non_Bank_Owned_ATMs_4"></div></td>					</tr>
+
+					<tr id="wireTransferFees" class="categoryHeader">
+						<th colspan="5">Wire Transfer Fees</th>
+					</tr>
+					<tr id="wireTransferFees_Sub" class="wireTransferFees categoryPanel">
+						<th>Domestic Outgoing</th>
+						<td><div class="Wire_Transfer_Fees_DO_1"></div></td><td><div class="Wire_Transfer_Fees_DO_2"></div></td><td><div class="Wire_Transfer_Fees_DO_3"></div></td><td><div class="Wire_Transfer_Fees_DO_4"></div></td>					</tr>
+					<tr class="wireTransferFees categoryPanel">
+						<th>Domestic Incoming</th>
+						<td><div class="Wire_Transfer_Fees_DI_1"></div></td><td><div class="Wire_Transfer_Fees_DI_2"></div></td><td><div class="Wire_Transfer_Fees_DI_3"></div></td><td><div class="Wire_Transfer_Fees_DI_4"></div></td>					</tr>
+					<tr class="wireTransferFees categoryPanel">
+						<th>International Outgoing</th>
+						<td><div class="Wire_Transfer_Fees_IO_1"></div></td><td><div class="Wire_Transfer_Fees_IO_2"></div></td><td><div class="Wire_Transfer_Fees_IO_3"></div></td><td><div class="Wire_Transfer_Fees_IO_4"></div></td>					</tr>
+					<tr class="wireTransferFees categoryPanel">
+						<th>International Incoming</th>
+						<td><div class="Wire_Transfer_Fees_II_1"></div></td><td><div class="Wire_Transfer_Fees_II_2"></div></td><td><div class="Wire_Transfer_Fees_II_3"></div></td><td><div class="Wire_Transfer_Fees_II_4"></div></td>					</tr>
+
+					<tr id="acceptedID" class="categoryHeader">
+						<th colspan="5">Accepted Forms of ID other than State & Federal Photo ID </th>
+					</tr>
+					<tr id="acceptedID_Sub" class="acceptedID categoryPanel">
+						<th>Accepting IDNYC</th>
+						<td><div class="Accept_IDNYC_1"></div></td><td><div class="Accept_IDNYC_2"></div></td><td><div class="Accept_IDNYC_3"></div></td><td><div class="Accept_IDNYC_4"></div></td>					</tr>
+					<tr class="acceptedID categoryPanel">
+						<th>Accepted Secondary ID</th>
+						<td><div class="Accept_Secondary_ID_1"></div></td><td><div class="Accept_Secondary_ID_2"></div></td><td><div class="Accept_Secondary_ID_3"></div></td><td><div class="Accept_Secondary_ID_4"></div></td>					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<!--table for small sizes -->
+		<div id="ranking-banking_wrapper_small" class="dataTables_wrapper no-footer visible-xs">
+			<table cellpadding="10" class="table">
+				<thead>
+					<tr>
+						<th>Bank Name</th>
+						<th>Minimum Opening Deposit</th>
+						<th>Monthly Maintenance Fees</th>
+						<th>Minimum Balance to Waive Monthly Fee</th>
+						<th>Other Methods to Waive Monthly Fee</th>
+						<th>Number of Transactions Permitted Before a Fee</th>
+						<th>Fee Per Additional Transaction</th>
+						<th>Debit Card Available</th>
+						<th>Direct Deposit Available</th>
+						<th>Printed Checks Available</th>
+						<th>Account Earns Interest</th>
+						<th>Account Can Link to a Savings Account</th>
+						<th>Fees Applied by Bank When Using a Domestic ATM Not Owned or In-Network</th>
+						<th>Foreign Transaction Fees</th>
+						<th>Stop Payment Fee</th>
+						<th>Returned Item Fee</th>
+						<th>Check Cashing Fee Service</th>
+						<th>Overdraft Fee (If Service Available)</th>
+						<th>Online Banking</th>
+						<th>Online Bank Statements</th>
+						<th>Online Bill Pay</th>
+						<th>Mobile App</th>
+						<th>Language Assistance (other than English)</th>
+						<th>Reward / Points</th>
+						<th>Second Chance Accounts</th>
+						<th>Evening / Weekend Hours</th>
+						<th>Number of NYC Branches</th>
+						<th>Number of NYC Bank Owned ATMs</th>
+						<th>Number of NYC Networked ATMs Without Surcharge</th>
+						<th>Domestic Outgoing</th>
+						<th>Domestic Incoming</th>
+						<th>International Outgoing</th>
+						<th>International Incoming</th>
+						<th>Accepting IDNYC</th>
+						<th>Accepted Secondary ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td data-title="Bank Name"><div class="Bank_Name_1" class="bankName"></div><div class="Product_Name_1"></div><div class="Branch_Count_1"></div></td><td data-title="Minimum Opening Deposit"><div class="Minimum_Opening_Deposit_1"></div></td><td data-title="Monthly Maintenance Fees"><div class="Monthly_Maintenance_Fee_1"></div></td><td data-title="Minimum Balance to Waive Monthly Fee"><div class="Minimum_Balance_1"></div></td><td data-title="Other Methods to Waive Monthly Fee"><div class="Other_Method_1"></div></td><td data-title="Number of Transactions Permitted Before a Fee"><div class="Transactions_Permitted_1"></div></td><td data-title="Fee Per Additional Transaction"><div class="Additional_Transaction_Fee_1"></div></td><td data-title="Debit Card Available"><div class="Debit_Card_1"></div></td><td data-title="Direct Deposit Available"><div class="Direct_Deposit_1"></div></td><td data-title="Printed Checks Available"><div class="Printed_Checks_1"></div></td><td data-title="Account Earns Interest"><div class="Earn_Interest_1"></div></td><td data-title="Account Can Link to a Savings Account"><div class="Link_Savings_Account_1"></div></td><td data-title="Fees Applied by Bank When Using a Domestic ATM Not Owned or In-Network"><div class="ATM_Fee_1"></div></td><td data-title="Foreign Transaction Fees"><div class="Foreign_Transaction_Fee_1"></div></td><td data-title="Stop Payment Fee"><div class="Stop_Payment_Fee_1"></div></td><td data-title="Returned Item Fee"><div class="Returned_Check_Fee_1"></div></td><td data-title="Check Cashing Fee Service"><div class="Check_Cashing_Fee_1"></div></td><td data-title="Overdraft Fee (If Service Available)"><div class="Overdraft_Fee_1"></div></td><td data-title="Online Banking"><div class="Online_Banking_1"></div></td><td data-title="Online Bank Statements"><div class="Online_Statements_1"></div></td><td data-title="Online Bill Pay"><div class="Online_Bill_Pay_1"></div></td><td data-title="Mobile App"><div class="Mobile_App_1"></div></td><td data-title="Language Assistance (other than English)"><div class="Language_Assistance_1"></div></td><td data-title="Reward / Points"><div class="Rewards_Points_1"></div></td><td data-title="Second Chance Accounts"><div class="Second_Chance_Account_1"></div></td><td data-title="Evening / Weekend Hours"><div class="Evening_Weekend_1"></div></td><td data-title="Number of NYC Branches"><div class="Branches_1"></div></td><td data-title="Number of NYC Bank Owned ATMs"><div class="Bank_Owned_ATMs_1"></div></td><td data-title="Number of NYC Networked ATMs Without Surcharge"><div class="Non_Bank_Owned_ATMs_1"></div></td><td data-title="Domestic Outgoing"><div class="Wire_Transfer_Fees_DO_1"></div></td><td data-title="Domestic Incoming"><div class="Wire_Transfer_Fees_DI_1"></div></td><td data-title="International Outgoing"><div class="Wire_Transfer_Fees_IO_1"></div></td><td data-title="International Incoming"><div class="Wire_Transfer_Fees_II_1"></div></td><td data-title="Accepting IDNYC"><div class="Accept_IDNYC_1"></div></td><td data-title="Accepted Secondary ID"><div class="Accept_Secondary_ID_1"></div></td></tr><tr><td data-title="Bank Name"><div class="Bank_Name_2" class="bankName"></div><div class="Product_Name_2"></div><div class="Branch_Count_2"></div></td><td data-title="Minimum Opening Deposit"><div class="Minimum_Opening_Deposit_2"></div></td><td data-title="Monthly Maintenance Fees"><div class="Monthly_Maintenance_Fee_2"></div></td><td data-title="Minimum Balance to Waive Monthly Fee"><div class="Minimum_Balance_2"></div></td><td data-title="Other Methods to Waive Monthly Fee"><div class="Other_Method_2"></div></td><td data-title="Number of Transactions Permitted Before a Fee"><div class="Transactions_Permitted_2"></div></td><td data-title="Fee Per Additional Transaction"><div class="Additional_Transaction_Fee_2"></div></td><td data-title="Debit Card Available"><div class="Debit_Card_2"></div></td><td data-title="Direct Deposit Available"><div class="Direct_Deposit_2"></div></td><td data-title="Printed Checks Available"><div class="Printed_Checks_2"></div></td><td data-title="Account Earns Interest"><div class="Earn_Interest_2"></div></td><td data-title="Account Can Link to a Savings Account"><div class="Link_Savings_Account_2"></div></td><td data-title="Fees Applied by Bank When Using a Domestic ATM Not Owned or In-Network"><div class="ATM_Fee_2"></div></td><td data-title="Foreign Transaction Fees"><div class="Foreign_Transaction_Fee_2"></div></td><td data-title="Stop Payment Fee"><div class="Stop_Payment_Fee_2"></div></td><td data-title="Returned Item Fee"><div class="Returned_Check_Fee_2"></div></td><td data-title="Check Cashing Fee Service"><div class="Check_Cashing_Fee_2"></div></td><td data-title="Overdraft Fee (If Service Available)"><div class="Overdraft_Fee_2"></div></td><td data-title="Online Banking"><div class="Online_Banking_2"></div></td><td data-title="Online Bank Statements"><div class="Online_Statements_2"></div></td><td data-title="Online Bill Pay"><div class="Online_Bill_Pay_2"></div></td><td data-title="Mobile App"><div class="Mobile_App_2"></div></td><td data-title="Language Assistance (other than English)"><div class="Language_Assistance_2"></div></td><td data-title="Reward / Points"><div class="Rewards_Points_2"></div></td><td data-title="Second Chance Accounts"><div class="Second_Chance_Account_2"></div></td><td data-title="Evening / Weekend Hours"><div class="Evening_Weekend_2"></div></td><td data-title="Number of NYC Branches"><div class="Branches_2"></div></td><td data-title="Number of NYC Bank Owned ATMs"><div class="Bank_Owned_ATMs_2"></div></td><td data-title="Number of NYC Networked ATMs Without Surcharge"><div class="Non_Bank_Owned_ATMs_2"></div></td><td data-title="Domestic Outgoing"><div class="Wire_Transfer_Fees_DO_2"></div></td><td data-title="Domestic Incoming"><div class="Wire_Transfer_Fees_DI_2"></div></td><td data-title="International Outgoing"><div class="Wire_Transfer_Fees_IO_2"></div></td><td data-title="International Incoming"><div class="Wire_Transfer_Fees_II_2"></div></td><td data-title="Accepting IDNYC"><div class="Accept_IDNYC_2"></div></td><td data-title="Accepted Secondary ID"><div class="Accept_Secondary_ID_2"></div></td></tr><tr><td data-title="Bank Name"><div class="Bank_Name_3" class="bankName"></div><div class="Product_Name_3"></div><div class="Branch_Count_3"></div></td><td data-title="Minimum Opening Deposit"><div class="Minimum_Opening_Deposit_3"></div></td><td data-title="Monthly Maintenance Fees"><div class="Monthly_Maintenance_Fee_3"></div></td><td data-title="Minimum Balance to Waive Monthly Fee"><div class="Minimum_Balance_3"></div></td><td data-title="Other Methods to Waive Monthly Fee"><div class="Other_Method_3"></div></td><td data-title="Number of Transactions Permitted Before a Fee"><div class="Transactions_Permitted_3"></div></td><td data-title="Fee Per Additional Transaction"><div class="Additional_Transaction_Fee_3"></div></td><td data-title="Debit Card Available"><div class="Debit_Card_3"></div></td><td data-title="Direct Deposit Available"><div class="Direct_Deposit_3"></div></td><td data-title="Printed Checks Available"><div class="Printed_Checks_3"></div></td><td data-title="Account Earns Interest"><div class="Earn_Interest_3"></div></td><td data-title="Account Can Link to a Savings Account"><div class="Link_Savings_Account_3"></div></td><td data-title="Fees Applied by Bank When Using a Domestic ATM Not Owned or In-Network"><div class="ATM_Fee_3"></div></td><td data-title="Foreign Transaction Fees"><div class="Foreign_Transaction_Fee_3"></div></td><td data-title="Stop Payment Fee"><div class="Stop_Payment_Fee_3"></div></td><td data-title="Returned Item Fee"><div class="Returned_Check_Fee_3"></div></td><td data-title="Check Cashing Fee Service"><div class="Check_Cashing_Fee_3"></div></td><td data-title="Overdraft Fee (If Service Available)"><div class="Overdraft_Fee_3"></div></td><td data-title="Online Banking"><div class="Online_Banking_3"></div></td><td data-title="Online Bank Statements"><div class="Online_Statements_3"></div></td><td data-title="Online Bill Pay"><div class="Online_Bill_Pay_3"></div></td><td data-title="Mobile App"><div class="Mobile_App_3"></div></td><td data-title="Language Assistance (other than English)"><div class="Language_Assistance_3"></div></td><td data-title="Reward / Points"><div class="Rewards_Points_3"></div></td><td data-title="Second Chance Accounts"><div class="Second_Chance_Account_3"></div></td><td data-title="Evening / Weekend Hours"><div class="Evening_Weekend_3"></div></td><td data-title="Number of NYC Branches"><div class="Branches_3"></div></td><td data-title="Number of NYC Bank Owned ATMs"><div class="Bank_Owned_ATMs_3"></div></td><td data-title="Number of NYC Networked ATMs Without Surcharge"><div class="Non_Bank_Owned_ATMs_3"></div></td><td data-title="Domestic Outgoing"><div class="Wire_Transfer_Fees_DO_3"></div></td><td data-title="Domestic Incoming"><div class="Wire_Transfer_Fees_DI_3"></div></td><td data-title="International Outgoing"><div class="Wire_Transfer_Fees_IO_3"></div></td><td data-title="International Incoming"><div class="Wire_Transfer_Fees_II_3"></div></td><td data-title="Accepting IDNYC"><div class="Accept_IDNYC_3"></div></td><td data-title="Accepted Secondary ID"><div class="Accept_Secondary_ID_3"></div></td></tr><tr><td data-title="Bank Name"><div class="Bank_Name_4" class="bankName"></div><div class="Product_Name_4"></div><div class="Branch_Count_4"></div></td><td data-title="Minimum Opening Deposit"><div class="Minimum_Opening_Deposit_4"></div></td><td data-title="Monthly Maintenance Fees"><div class="Monthly_Maintenance_Fee_4"></div></td><td data-title="Minimum Balance to Waive Monthly Fee"><div class="Minimum_Balance_4"></div></td><td data-title="Other Methods to Waive Monthly Fee"><div class="Other_Method_4"></div></td><td data-title="Number of Transactions Permitted Before a Fee"><div class="Transactions_Permitted_4"></div></td><td data-title="Fee Per Additional Transaction"><div class="Additional_Transaction_Fee_4"></div></td><td data-title="Debit Card Available"><div class="Debit_Card_4"></div></td><td data-title="Direct Deposit Available"><div class="Direct_Deposit_4"></div></td><td data-title="Printed Checks Available"><div class="Printed_Checks_4"></div></td><td data-title="Account Earns Interest"><div class="Earn_Interest_4"></div></td><td data-title="Account Can Link to a Savings Account"><div class="Link_Savings_Account_4"></div></td><td data-title="Fees Applied by Bank When Using a Domestic ATM Not Owned or In-Network"><div class="ATM_Fee_4"></div></td><td data-title="Foreign Transaction Fees"><div class="Foreign_Transaction_Fee_4"></div></td><td data-title="Stop Payment Fee"><div class="Stop_Payment_Fee_4"></div></td><td data-title="Returned Item Fee"><div class="Returned_Check_Fee_4"></div></td><td data-title="Check Cashing Fee Service"><div class="Check_Cashing_Fee_4"></div></td><td data-title="Overdraft Fee (If Service Available)"><div class="Overdraft_Fee_4"></div></td><td data-title="Online Banking"><div class="Online_Banking_4"></div></td><td data-title="Online Bank Statements"><div class="Online_Statements_4"></div></td><td data-title="Online Bill Pay"><div class="Online_Bill_Pay_4"></div></td><td data-title="Mobile App"><div class="Mobile_App_4"></div></td><td data-title="Language Assistance (other than English)"><div class="Language_Assistance_4"></div></td><td data-title="Reward / Points"><div class="Rewards_Points_4"></div></td><td data-title="Second Chance Accounts"><div class="Second_Chance_Account_4"></div></td><td data-title="Evening / Weekend Hours"><div class="Evening_Weekend_4"></div></td><td data-title="Number of NYC Branches"><div class="Branches_4"></div></td><td data-title="Number of NYC Bank Owned ATMs"><div class="Bank_Owned_ATMs_4"></div></td><td data-title="Number of NYC Networked ATMs Without Surcharge"><div class="Non_Bank_Owned_ATMs_4"></div></td><td data-title="Domestic Outgoing"><div class="Wire_Transfer_Fees_DO_4"></div></td><td data-title="Domestic Incoming"><div class="Wire_Transfer_Fees_DI_4"></div></td><td data-title="International Outgoing"><div class="Wire_Transfer_Fees_IO_4"></div></td><td data-title="International Incoming"><div class="Wire_Transfer_Fees_II_4"></div></td><td data-title="Accepting IDNYC"><div class="Accept_IDNYC_4"></div></td><td data-title="Accepted Secondary ID"><div class="Accept_Secondary_ID_4"></div></td></tr>				</tbody>
+			</table>
+		</div>
+        
+        <div id="extraInfo">
+        <small class="pull-right" style="margin-top: -5px;">Bank data current as of May 2015</small>
+        <br>
+        <i>*The information these banks provided in printed materials and online, as well as by the bank’s own employees, was insufficient to identify a “basic banking” product consistent with the criteria set forth under New York Banking Law 14-f.</i>
+        </div>
+	</div>
+
+    <footer class="footer text-center">
+        <div class="container">
+        	<h3>Office of the Comptroller City of New York • One Centre Street, New York, NY 10007 • (212) 669-3916</h3>
+        </div>
+    </footer>
+
+<!-- Map modal -->
+<div id="map-modal" class="modal fade bs-example-modal-lg" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Map Your Search Results</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+			<article id="demo-holder" class="autoclear">
+				<div id="map_wrapper">
+					<div id="map_canvas" class="mapping"></div>
+				</div>
+			</article>
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Social Share -->
+<div class="addthis_sharing_toolbox"></div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5566075373bbb79e" async="async"></script>
+
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // ga('create', 'UA-63993345-1', 'auto');
+  // ga('send', 'pageview');
+
+</script>
+	
+<script type="text/javascript">
+//window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"72e7f8b5aa","applicationID":"5134405","transactionName":"Y10DZhBZWxBTB0QLW1oXNEALF0ECWQFZFkBbTAlXAFlbCB0CWQxQa1k+UANWXk1CDEA=","queueTime":0,"applicationTime":31,"ttGuid":"","agentToken":"","atts":"TxoAEFhDSB4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+
+</html>

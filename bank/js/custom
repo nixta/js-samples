@@ -1,0 +1,131 @@
+$(document).ready(function() {
+	//expand/collapse rows
+	$("#Core_Features").click(function() {
+		$('.Core_Features').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#otherCommonFeatures").click(function() {
+		$('.otherCommonFeatures').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#commonFees").click(function() {
+		$('.commonFees').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#onlineServices").click(function() {
+		$('.onlineServices').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#Other_Services").click(function() {
+		$('.Other_Services').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#ATMBranchAccess").click(function() {
+		$('.ATMBranchAccess').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#wireTransferFees").click(function() {
+		$('.wireTransferFees').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	$("#acceptedID").click(function() {
+		$('.acceptedID').toggleClass("expandtd");
+		$(this).toggleClass("expand");
+	});
+	
+	//define width of table
+	var tablewidth = $('#ranking-banking_wrapper table').width();
+	var tdwidth = $('#ranking-banking_wrapper .categoryPanel td').width() + 18;
+
+	//make header fixed if within window
+	if ($('#ranking-banking_wrapper').length) {
+		$(document).scroll(function() {
+			if ($(this).scrollTop() >= $('#ranking-banking_wrapper').position().top) {
+				$('#ranking-banking_wrapper thead').css("position", "fixed").css("top", "0px").css("width", tablewidth);
+				$('#ranking-banking_wrapper thead th').css("width", tdwidth);
+			} else {
+				$('#ranking-banking_wrapper thead').css("position", "relative").css("top", "auto").css("width", "auto");
+				$('#ranking-banking_wrapper thead th').css("width", "auto");
+			}
+		})
+	}
+
+	//map
+	$('#map-modal').on('shown.bs.modal', function(){
+		initialize();
+	});
+	
+	//language
+	$("#language_select").change(function() {
+		var languageSelected = $('#language_select').val();
+		$('#Language_Assistance label').html('Language: <br>' + languageSelected);
+		$('#Language_Assistance').addClass('checked');
+	});
+	
+	var LabelDisplay;
+	if (document.getElementById('Language_Assistance').className == 'checked') {
+		LabelDisplay = $('#language_select').val();
+		$('#Language_Assistance label').html('Language: <br>' + LabelDisplay);
+	}
+
+	//Load Data
+	popData();
+	
+	//zip code
+	var DisplayOption = "No";
+	
+	if (document.getElementById('Zipcode_Check').checked) {
+		DisplayOption = document.getElementById('Zipcode_Check').value;
+	}
+	
+	if (DisplayOption == "No") {$(".Zip_Code_form").hide(); $('#Near_Zipcode label span').show();}
+	else {$(".Zip_Code_form").show(); $('#Near_Zipcode label span').hide();}
+
+	$("#Zipcode_Check").click(function() {
+		$(".Zip_Code_form").toggle();
+		if(document.getElementById('Zipcode_Check').checked) {
+			$('#Near_Zipcode label span').hide();
+		}
+		else {
+			$('#Near_Zipcode label span').show();
+		}
+	});
+	
+	validate();
+    $('#zipcode').change(validate);
+	$('#zipcode').keyup(validate);
+	
+	
+    
+    
+});
+
+function validate(){
+    if ($('#zipcode').val().length == 5) {
+        $(".Zip_Code_form button").prop("disabled", false);
+    }
+    else {
+        $(".Zip_Code_form button").prop("disabled", true);
+    }
+}
+
+//fix header on browser resize
+$(window).resize(function() {
+	var tablewidth = $('#ranking-banking_wrapper table').width();
+	var tdwidth = $('#ranking-banking_wrapper .categoryPanel td').width() + 20;
+	$('#ranking-banking_wrapper thead').css("position", "relative").css("top", "auto").css("width", tablewidth);
+	$('#ranking-banking_wrapper thead th').css("width", tdwidth);
+
+	//make fixed if within window
+	if ($('#ranking-banking_wrapper').length) {
+		$(document).scroll(function() {
+			if ($(this).scrollTop() >= $('#ranking-banking_wrapper').position().top) {
+				$('#ranking-banking_wrapper thead').css("position", "fixed").css("top", "0px").css("width", tablewidth);
+				$('#ranking-banking_wrapper thead th').css("width", tdwidth);
+			} else {
+				$('#ranking-banking_wrapper thead').css("position", "relative").css("top", "auto").css("width", "auto");
+				$('#ranking-banking_wrapper thead th').css("width", "auto");
+			}
+		})
+	}
+});
